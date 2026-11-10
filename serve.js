@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /**
- * Shared native HTTPS static server — no npm dependencies.
+ * Shared native static server (HTTPS or plain HTTP) — no npm dependencies.
  * Pretty game URLs come from games.json (path → file).
+ * Without TLS .pem files, serves plain HTTP so clones just need Node.
  */
 const http = require("http");
 const https = require("https");
+const net = require("net");
 const fs = require("fs");
 const path = require("path");
 const { URL } = require("url");
@@ -164,11 +166,11 @@ function makeHandler(homePage) {
   };
 }
 
+function hasTlsFiles() {
+  return fs.existsSync(KEY_FILE) && fs.existsSync(CERT_FILE);
+}
+
 function loadTls() {
-  if (!fs.existsSync(KEY_FILE) || !fs.existsSync(CERT_FILE)) {
-    console.error(`Missing TLS files:\n  ${KEY_FILE}\n  ${CERT_FILE}`);
-    process.exit(1);
-  }
   const key = fs.readFileSync(KEY_FILE);
   const cert = fs.readFileSync(CERT_FILE);
   if (!String(cert).includes("BEGIN CERTIFICATE")) {
@@ -191,56 +193,185 @@ function localIps() {
   return out;
 }
 
-function start(opts) {
-  const HTTPS_PORT = Number(process.argv[2]) || 9501;
-  const WANT_HTTP = process.argv[3] === "http";
-  const HTTP_PORT = Number(process.argv[4]) || 8080;
-  const homePage = opts.homePage.startsWith("/") ? opts.homePage : `/${opts.homePage}`;
+const LOCAL_PORT = 9500; // http://127.0.0.1:9500/
+const PUBLIC_PORT = 9501; // https://bitcointera.com:9501/chess
 
-  const tls = loadTls();
-  const server = https.createServer(tls, makeHandler(homePage));
+/**
+ * Args:
+ *   node serv.js                 → :9500 + :9501 (HTTP+HTTPS) when certs exist
+ *   node serv.js 9500            → only that port
+ *   node serv.js http [port]     → HTTP only
+ *   node serv.js https [port]    → HTTPS only
+ *
+ * Dual-protocol on each port (TLS sniff): http:// and https:// both work.
+ */
+function parseArgs() {
+  const a = process.argv.slice(2);
 
-  server.listen(HTTPS_PORT, "0.0.0.0", () => {
-    const ips = localIps();
-    const games = loadGames();
-    console.log(`${opts.name} HTTPS on 0.0.0.0:${HTTPS_PORT}`);
-    console.log(`  https://localhost:${HTTPS_PORT}/`);
-    console.log(`  https://${DOMAIN}:${HTTPS_PORT}/`);
-    for (const g of games) {
-      const p = g.path || g.href;
-      if (p) console.log(`  https://${DOMAIN}:${HTTPS_PORT}${p}`);
-    }
-    for (const ip of ips) console.log(`  https://${ip}:${HTTPS_PORT}/`);
-    console.log("Press Ctrl+C to stop");
-  });
-
-  server.on("error", (err) => {
-    if (err.code === "EADDRINUSE") {
-      console.error(
-        `Port ${HTTPS_PORT} in use. Try: node ${opts.entry} ${HTTPS_PORT + 1}`
-      );
-    } else if (err.code === "EACCES") {
-      console.error(`Need permission for port ${HTTPS_PORT}. Try sudo or another port.`);
-    } else {
-      console.error(err);
-    }
-    process.exit(1);
-  });
-
-  if (WANT_HTTP) {
-    const redirect = http.createServer((req, res) => {
-      const host = (req.headers.host || DOMAIN).replace(/:\d+$/, "");
-      const loc = `https://${host}:${HTTPS_PORT}${req.url || "/"}`;
-      res.writeHead(301, { Location: loc });
-      res.end();
-    });
-    redirect.listen(HTTP_PORT, "0.0.0.0", () => {
-      console.log(`HTTP redirect :${HTTP_PORT} → https :${HTTPS_PORT}`);
-    });
-    redirect.on("error", (err) => {
-      console.error("HTTP redirect failed:", err.message);
-    });
+  if (a[0] === "http") {
+    return { mode: "http", port: Number(a[1]) || LOCAL_PORT, redirectPort: null, ports: null };
   }
+  if (a[0] === "https") {
+    return { mode: "https", port: Number(a[1]) || LOCAL_PORT, redirectPort: null, ports: null };
+  }
+
+  if (a[0] != null && Number.isFinite(Number(a[0]))) {
+    const port = Number(a[0]);
+    if (a[1] === "http" && a[2] == null) {
+      return { mode: "http", port, redirectPort: null, ports: null };
+    }
+    if (a[1] === "https" && a[2] == null) {
+      return { mode: "https", port, redirectPort: null, ports: null };
+    }
+    if (a[1] === "redirect" || a[1] === "http" || a[1] === "https") {
+      return {
+        mode: "dual",
+        port,
+        redirectPort: Number(a[2]) || 8080,
+        ports: null,
+      };
+    }
+    return { mode: "auto", port, redirectPort: null, ports: [port] };
+  }
+  // Default: local 9500 + public 9501
+  return {
+    mode: "auto",
+    port: LOCAL_PORT,
+    redirectPort: null,
+    ports: [LOCAL_PORT, PUBLIC_PORT],
+  };
+}
+
+function onListenError(err, port, entry, { fatal = true } = {}) {
+  if (err.code === "EADDRINUSE") {
+    console.error(`Port ${port} in use.${fatal ? ` Try: node ${entry} ${port + 1}` : " (skipping)"}`);
+  } else if (err.code === "EACCES") {
+    console.error(`Need permission for port ${port}.${fatal ? " Try sudo or another port." : " (skipping)"}`);
+  } else {
+    console.error(err);
+  }
+  if (fatal) process.exit(1);
+}
+
+function printUrls(opts, schemes, port) {
+  const list = Array.isArray(schemes) ? schemes : [schemes];
+  const ips = localIps();
+  const games = loadGames();
+  const label = list.map((s) => s.toUpperCase()).join("+");
+  console.log(`${opts.name} ${label} on 0.0.0.0:${port}`);
+  for (const scheme of list) {
+    console.log(`  ${scheme}://localhost:${port}/`);
+    console.log(`  ${scheme}://127.0.0.1:${port}/`);
+    if (scheme === "https") {
+      console.log(`  ${scheme}://${DOMAIN}:${port}/`);
+      console.log(`  ${scheme}://${DOMAIN}:${port}/chess`);
+    }
+  }
+  for (const g of games) {
+    const p = g.path || g.href;
+    if (!p) continue;
+    for (const scheme of list) {
+      console.log(`  ${scheme}://localhost:${port}${p}`);
+    }
+  }
+  for (const ip of ips) {
+    for (const scheme of list) {
+      console.log(`  ${scheme}://${ip}:${port}/`);
+    }
+  }
+  console.log("Press Ctrl+C to stop");
+}
+
+function startRedirect(port, httpsPort) {
+  const redirect = http.createServer((req, res) => {
+    const host = (req.headers.host || DOMAIN).replace(/:\d+$/, "");
+    const loc = `https://${host}:${httpsPort}${req.url || "/"}`;
+    res.writeHead(301, { Location: loc });
+    res.end();
+  });
+  redirect.listen(port, "0.0.0.0", () => {
+    console.log(`HTTP redirect :${port} → https :${httpsPort}`);
+  });
+  redirect.on("error", (err) => {
+    console.error("HTTP redirect failed:", err.message);
+  });
+}
+
+function startHttp(opts, port, homePage, { fatal = true } = {}) {
+  const server = http.createServer(makeHandler(homePage));
+  server.listen(port, "0.0.0.0", () => printUrls(opts, "http", port));
+  server.on("error", (err) => onListenError(err, port, opts.entry, { fatal }));
+}
+
+function startHttps(opts, port, homePage, redirectPort, { fatal = true } = {}) {
+  const server = https.createServer(loadTls(), makeHandler(homePage));
+  server.listen(port, "0.0.0.0", () => printUrls(opts, "https", port));
+  server.on("error", (err) => onListenError(err, port, opts.entry, { fatal }));
+  if (redirectPort != null) startRedirect(redirectPort, port);
+}
+
+/** One TCP port: route TLS ClientHello → HTTPS, else → HTTP. */
+function startDual(opts, port, homePage, redirectPort, { fatal = true } = {}) {
+  const handler = makeHandler(homePage);
+  const httpServer = http.createServer(handler);
+  const httpsServer = https.createServer(loadTls(), handler);
+
+  const server = net.createServer((socket) => {
+    socket.once("error", () => {
+      try {
+        socket.destroy();
+      } catch (_) {
+        /* ignore */
+      }
+    });
+    socket.once("data", (buf) => {
+      socket.pause();
+      // 0x16 = TLS handshake; 0x80 = legacy SSLv2-style header
+      const isTls = buf[0] === 0x16 || buf[0] === 0x80;
+      socket.unshift(buf);
+      (isTls ? httpsServer : httpServer).emit("connection", socket);
+      process.nextTick(() => {
+        try {
+          socket.resume();
+        } catch (_) {
+          /* ignore */
+        }
+      });
+    });
+  });
+
+  server.listen(port, "0.0.0.0", () => printUrls(opts, ["http", "https"], port));
+  server.on("error", (err) => onListenError(err, port, opts.entry, { fatal }));
+  if (redirectPort != null) startRedirect(redirectPort, port);
+}
+
+function start(opts) {
+  const homePage = opts.homePage.startsWith("/") ? opts.homePage : `/${opts.homePage}`;
+  const args = parseArgs();
+
+  let mode = args.mode;
+  if (mode === "auto") {
+    mode = hasTlsFiles() ? "dual" : "http";
+    if (mode === "http") {
+      console.log("No TLS certs found — serving plain HTTP only.");
+    }
+  } else if ((mode === "https" || mode === "dual") && !hasTlsFiles()) {
+    console.log("No TLS certs found — falling back to plain HTTP.");
+    mode = "http";
+  }
+
+  const ports = args.ports || [args.port];
+  ports.forEach((port, i) => {
+    const fatal = i === 0; // first port must bind; extra ports are best-effort
+    const redirect = i === 0 ? args.redirectPort : null;
+    if (mode === "http") {
+      startHttp(opts, port, homePage, { fatal });
+    } else if (mode === "https") {
+      startHttps(opts, port, homePage, redirect, { fatal });
+    } else {
+      startDual(opts, port, homePage, redirect, { fatal });
+    }
+  });
 }
 
 module.exports = { start, loadGames, buildRoutes };
