@@ -1,0 +1,119 @@
+:root {
+  --bg-top: #14261c;
+  --bg-bottom: #0b1611;
+  --panel: #b8f26e;
+  --ink: #e8f5ec;
+  --muted: #8fb89a;
+  --card: rgba(30, 58, 47, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(184, 242, 110, 0.16), transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(255, 107, 74, 0.12), transparent 45%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.hub {
+  width: 100%;
+  min-height: 100dvh;
+  min-height: 100vh;
+  padding: clamp(1rem, 4vh, 2.5rem) clamp(1rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.hub-head {
+  margin-bottom: 1.4rem;
+}
+
+.hub-brand {
+  margin: 0 0 0.55rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(1.2rem, 5vw, 1.7rem);
+  color: var(--panel);
+  letter-spacing: 0.04em;
+}
+
+.hub-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.hub-sub code {
+  color: #ffe08a;
+  font-size: 0.9em;
+}
+
+.game-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  width: min(100%, 1100px);
+}
+
+.game-col {
+  min-width: 0;
+}
+
+.col-title {
+  margin: 0 0 0.75rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+  color: var(--panel);
+  letter-spacing: 0.04em;
+}
+
+.game-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .game-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.game-list a {
+  display: block;
+  padding: 1.15rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
+  border: 2px solid rgba(184, 242, 110, 0.35);
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.game-list a:hover {
+  background: rgba(184, 242, 110, 0.14);
+  border-color: var(--panel);
+  transform: translateY(-2px);
+}
+
+.game-list h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.85rem;
+  color: var(--panel);
+}
+
+.game-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

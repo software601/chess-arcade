@@ -1,0 +1,246 @@
+[
+  {
+    "id": "chess",
+    "title": "Chess",
+    "path": "/chess",
+    "file": "chess/index.html",
+    "blurb": "You vs CPU \u2014 all pieces, real rules."
+  },
+  {
+    "id": "chesspuzzles",
+    "title": "Chess Puzzles",
+    "path": "/chesspuzzles",
+    "file": "chesspuzzles/index.html",
+    "aliases": [
+      "/puzzles",
+      "/chess-puzzles"
+    ],
+    "blurb": "Endgame puzzles \u00b7 Stockfish \u00b7 levels 1\u2013100."
+  },
+  {
+    "id": "chessmulti",
+    "title": "Chess Multi",
+    "path": "/chessmulti",
+    "file": "chessmulti/index.html",
+    "aliases": [
+      "/chess-multi"
+    ],
+    "blurb": "You vs full multi-threaded Stockfish WASM \u00b7 levels 1\u2013100."
+  },
+  {
+    "id": "puzzlemulti",
+    "title": "Puzzle Multi",
+    "path": "/puzzlemulti",
+    "file": "puzzlemulti/index.html",
+    "aliases": [
+      "/puzzle-multi",
+      "/puzzles-multi"
+    ],
+    "blurb": "Puzzles \u00b7 full multi-threaded Stockfish WASM \u00b7 levels 1\u2013100."
+  },
+  {
+    "id": "chess001",
+    "title": "Chess 001 \u00b7 Lessons",
+    "path": "/chess001",
+    "file": "chess001/index.html",
+    "aliases": [
+      "/lessons",
+      "/chess-lessons",
+      "/chess001-lessons"
+    ],
+    "blurb": "100 beginning lessons \u00b7 Fischer / Seirawan / Capablanca style \u00b7 Stockfish lite."
+  },
+  {
+    "id": "chess002",
+    "title": "Chess 002 \u00b7 Books",
+    "path": "/chess002",
+    "file": "chess002/index.html",
+    "aliases": [
+      "/books",
+      "/chess-books",
+      "/chess002-lessons"
+    ],
+    "blurb": "600 lessons \u00b7 200 each: Chandler mates / Masetti tactics / Chernev logic \u00b7 Stockfish lite."
+  },
+  {
+    "id": "chess003",
+    "title": "Chess 003 \u00b7 Endgames",
+    "path": "/chess003",
+    "file": "chess003/index.html",
+    "aliases": [
+      "/endgames",
+      "/silman",
+      "/chess003-endgames"
+    ],
+    "blurb": "100 endgame lessons \u00b7 Silman-style rating bands (<1000\u21921600+) \u00b7 Stockfish lite."
+  },
+  {
+    "id": "chess004",
+    "title": "Chess 004 \u00b7 Amateur & Dvoretsky",
+    "path": "/chess004",
+    "file": "chess004/index.html",
+    "aliases": [
+      "/amateur",
+      "/dvoretsky",
+      "/chess004-books"
+    ],
+    "blurb": "200 lessons \u00b7 100 Amateur's Mind\u2013style thinking + 100 Dvoretsky-style endgames \u00b7 Stockfish lite."
+  },
+  {
+    "id": "chess005",
+    "title": "Chess 005 \u00b7 Structures & Strategy",
+    "path": "/chess005",
+    "file": "chess005/index.html",
+    "aliases": [
+      "/structures",
+      "/watson",
+      "/aagaard",
+      "/chess005-books"
+    ],
+    "blurb": "300 lessons \u00b7 100 each: Flores Rios structures / Watson modern strategy / Aagaard calculation \u00b7 Stockfish lite."
+  },
+  {
+    "id": "chess006",
+    "title": "Chess 006 \u00b7 Kotov Fischer Bronstein",
+    "path": "/chess006",
+    "file": "chess006/index.html",
+    "aliases": [
+      "/kotov",
+      "/fischer-games",
+      "/zurich",
+      "/chess006-books"
+    ],
+    "blurb": "300 lessons \u00b7 100 each: Kotov calculation / Fischer memorable thinking / Bronstein Zurich strategy \u00b7 richer descriptions."
+  },
+  {
+    "id": "chess007",
+    "title": "Chess 007 \u00b7 Decisions & Endings",
+    "path": "/chess007",
+    "file": "chess007/index.html",
+    "aliases": [
+      "/gelfand",
+      "/mueller",
+      "/naroditsky",
+      "/chess007-books"
+    ],
+    "blurb": "300 lessons \u00b7 100 each: Gelfand decisions / M\u00fcller & Lamprecht endings / Naroditsky complex endgames \u00b7 richer descriptions."
+  },
+  {
+    "id": "chess008",
+    "title": "Chess 008 \u00b7 Hard Analysis",
+    "path": "/chess008",
+    "file": "chess008/index.html",
+    "aliases": [
+      "/resources",
+      "/strategic-play",
+      "/analytical",
+      "/chess008-books"
+    ],
+    "blurb": "300 lessons \u00b7 100 each: Dvoretsky Resources / Aagaard Strategic Play / Analytical Manual \u00b7 richer descriptions."
+  },
+  {
+    "id": "snake",
+    "title": "Snake",
+    "path": "/snake",
+    "file": "snake/index.html",
+    "blurb": "Eat red food. Grow. Don't hit the walls."
+  },
+  {
+    "id": "pac-man",
+    "title": "Pac-Man",
+    "path": "/pac-man",
+    "file": "pac-man/index.html",
+    "aliases": [
+      "/pacman"
+    ],
+    "blurb": "Clear the maze. Power pellets. Dodge ghosts."
+  },
+  {
+    "id": "hangman",
+    "title": "Hangman",
+    "path": "/hangman",
+    "file": "hangman/index.html",
+    "blurb": "Guess the word before the stick figure is done."
+  },
+  {
+    "id": "pong",
+    "title": "Pong",
+    "path": "/pong",
+    "file": "pong/index.html",
+    "blurb": "Classic paddle duel \u2014 you vs CPU."
+  },
+  {
+    "id": "breakout",
+    "title": "Breakout",
+    "path": "/breakout",
+    "file": "breakout/index.html",
+    "aliases": [
+      "/arkanoid"
+    ],
+    "blurb": "Paddle + ball \u2014 clear every brick."
+  },
+  {
+    "id": "tetris",
+    "title": "Tetris",
+    "path": "/tetris",
+    "file": "tetris/index.html",
+    "blurb": "Falling blocks \u2014 clear lines, don't top out."
+  },
+  {
+    "id": "flappy",
+    "title": "Flappy Bird",
+    "path": "/flappy",
+    "file": "flappy/index.html",
+    "aliases": [
+      "/flappy-bird"
+    ],
+    "blurb": "Flap through the pipes. Don't crash."
+  },
+  {
+    "id": "sokoban",
+    "title": "Sokoban",
+    "path": "/sokoban",
+    "file": "sokoban/index.html",
+    "blurb": "Push every box onto a target square."
+  },
+  {
+    "id": "connect4",
+    "title": "Connect Four",
+    "path": "/connect4",
+    "file": "connect4/index.html",
+    "aliases": [
+      "/connect-four",
+      "/c4"
+    ],
+    "blurb": "Drop discs \u2014 get four in a row."
+  },
+  {
+    "id": "asteroids",
+    "title": "Asteroids",
+    "path": "/asteroids",
+    "file": "asteroids/index.html",
+    "blurb": "Ship, rocks, wrap-around space."
+  },
+  {
+    "id": "minesweeper",
+    "title": "Minesweeper",
+    "path": "/minesweeper",
+    "file": "minesweeper/index.html",
+    "aliases": [
+      "/mines",
+      "/mine-sweeper"
+    ],
+    "blurb": "Grid, flags, flood-fill clears."
+  },
+  {
+    "id": "space-invaders",
+    "title": "Space Invaders",
+    "path": "/space-invaders",
+    "file": "space-invaders/index.html",
+    "aliases": [
+      "/invaders",
+      "/spaceinvaders"
+    ],
+    "blurb": "Rows of aliens. Shoot. Don't get invaded."
+  }
+]

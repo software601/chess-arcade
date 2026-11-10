@@ -1,0 +1,232 @@
+:root {
+  --bg-top: #1a3a6e;
+  --bg-bottom: #0d2244;
+  --panel: #f2f7ff;
+  --ink: #eaf1ff;
+  --muted: #9db4d8;
+  --accent: #ffd166;
+  --red: #e63946;
+  --yellow: #ffd166;
+  --board: #1d4e89;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 209, 102, 0.16), transparent 42%),
+    radial-gradient(circle at 82% 82%, rgba(230, 57, 70, 0.14), transparent 48%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.brand {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.85rem, 2.8vw, 1.15rem);
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.nav a[aria-current="page"],
+.nav a:hover {
+  color: var(--accent);
+}
+
+.score {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.score span {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  background: rgba(242, 247, 255, 0.06);
+  border: 3px solid rgba(242, 247, 255, 0.28);
+  overflow: auto;
+}
+
+.settings {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.field select {
+  width: 100%;
+  padding: 0.45rem;
+  border: 2px solid rgba(242, 247, 255, 0.3);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 2.1rem 2.4rem 2.1rem;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.step-val {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.step-btn {
+  appearance: none;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 2px solid rgba(242, 247, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.step-btn:hover {
+  background: rgba(255, 209, 102, 0.22);
+}
+
+.howto {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  border-top: 1px solid rgba(242, 247, 255, 0.16);
+  padding-top: 0.55rem;
+}
+
+.howto h2 {
+  margin: 0 0 0.4rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.55rem;
+  color: var(--accent);
+}
+
+.howto ol {
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.howto li {
+  margin: 0.22rem 0;
+}
+
+.howto strong {
+  color: var(--ink);
+}
+
+.turn {
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent);
+  min-height: 1.3em;
+}
+
+.btn-start {
+  appearance: none;
+  width: 100%;
+  min-height: 3.2rem;
+  margin-top: auto;
+  padding: 0.7rem 0.75rem;
+  border: 3px solid #b8860b;
+  background: var(--accent);
+  color: #2a1c00;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 2vw, 0.7rem);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #8a6508;
+}
+
+.btn-start:hover {
+  filter: brightness(1.05);
+}
+
+.btn-start:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 #8a6508;
+}
+
+#board {
+  background: var(--board);
+  border: 4px solid #0f2f57;
+  image-rendering: auto;
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  pointer-events: none;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 2vw, 0.75rem);
+  line-height: 1.7;
+  color: var(--accent);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+  white-space: pre-line;
+}
+
+.overlay[hidden] {
+  display: none;
+}

@@ -1,0 +1,215 @@
+/* Shared: fill the current browser window */
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: block;
+}
+
+body:has(.hub) {
+  overflow: auto;
+}
+
+.stage {
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  margin: 0;
+  padding: 0.55rem 0.7rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hud {
+  flex: 0 0 auto;
+  margin-bottom: 0.45rem;
+}
+
+/* Left menu | game board (no overlap) */
+.layout {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(11rem, 12.5rem) minmax(0, 1fr);
+  gap: 0.65rem;
+  align-items: stretch;
+}
+
+.controls {
+  min-height: 0;
+  overflow: auto;
+  z-index: 1;
+}
+
+.board-wrap {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-anchor: none;
+}
+
+/* Snake / Pac-Man / Pong: canvas fills the board pane */
+.board-wrap.fill-canvas {
+  display: block;
+}
+
+.board-wrap.fill-canvas > #board {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: fill;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Hangman-style boards: stacked content, not absolute canvas */
+.board-wrap.stack-board {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.board-wrap.stack-board > #board {
+  position: static;
+  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  max-height: 45%;
+  object-fit: contain;
+}
+
+.hint {
+  flex: 0 0 auto;
+  margin: 0.45rem 0 0;
+}
+
+.overlay {
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow: auto;
+    height: auto;
+    min-height: 100%;
+    min-height: 100dvh;
+  }
+
+  .stage {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .layout{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    /* auto rows: board sizes via aspect-ratio, panels by content */
+    grid-template-rows: 66.666vh auto auto;
+    align-content: start;
+    overflow: visible;
+    flex: 0 0 auto;
+  }
+
+  /* Board → controls (right) → info/guide (left) */
+  .board-wrap {
+    order: 1;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100%;
+    height: 66.666dvh !important;
+    height: 66.666vh !important;
+    min-height: 66.666dvh;
+    min-height: 66.666vh;
+    max-height: 70dvh;
+    max-height: 70vh;
+    aspect-ratio: auto;
+    overflow-anchor: none;
+    scroll-margin-top: 0;
+  }
+
+  .controls{
+    order: 2;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    max-height: 42vh;
+  
+    overflow: auto;
+    min-height: 28vh;}
+
+  .lesson-info,
+  .guide-panel{
+    order: 3;
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    max-height: 42vh;
+  
+    overflow: auto;
+    min-height: 28vh;}
+}
+
+
+/* Quick actions over the board (top-right) — does not resize the board */
+.board-actions {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: flex-end;
+  max-width: min(100%, 14.5rem);
+  pointer-events: none;
+}
+.board-actions .board-act {
+  pointer-events: auto;
+  appearance: none;
+  margin: 0;
+  padding: 0.35rem 0.45rem;
+  min-height: 1.85rem;
+  border: 2px solid rgba(232, 238, 232, 0.4);
+  border-radius: 0.25rem;
+  background: rgba(13, 18, 16, 0.82);
+  color: #e8eee8;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.1;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+.board-actions .board-act:hover {
+  filter: brightness(1.08);
+}
+.board-actions .board-act:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.board-actions .board-act-go {
+  border-color: #9a7430;
+  background: rgba(212, 168, 75, 0.92);
+  color: #1a1206;
+}

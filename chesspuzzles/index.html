@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Puzzles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/viewport.css?v=48" />
+    <link rel="stylesheet" href="/chesspuzzles/puzzles.css?v=46" />
+  </head>
+  <body>
+    <div class="stage">
+      <header class="hud">
+        <h1 class="brand">Puzzles</h1>
+        <nav class="nav">
+          <a href="/">Arcade</a>
+          <a href="/chess">Chess</a>
+          <a href="/chesspuzzles" aria-current="page">Puzzles</a>
+          <a href="/chessmulti">Chess Multi</a>
+          <a href="/puzzlemulti">Puzzle Multi</a>
+          <a href="/chess001">001</a>
+          <a href="/chess002">002</a>
+          <a href="/chess003">003</a>
+          <a href="/chess004">004</a>
+          <a href="/chess005">005</a>
+          <a href="/chess006">006</a>
+          <a href="/chess007">007</a>
+          <a href="/chess008">008</a>
+        </nav>
+        <p class="score" aria-live="polite">
+          <span id="status">Endgame · find the win</span>
+        </p>
+      </header>
+
+      <div class="layout">
+
+        <div class="board-wrap fill-canvas">
+          <canvas id="board" width="640" height="640" aria-label="Chess puzzle board"></canvas>
+          <p class="overlay" id="overlay" hidden>Find the win</p>
+        
+
+          <div class="board-actions" aria-label="Board actions">
+            <button type="button" class="board-act board-act-go" data-board-act="next">Next</button>
+            <button type="button" class="board-act" data-board-act="back">Take back</button>
+            <button type="button" class="board-act" data-board-act="hint">Hint</button>
+            <button type="button" class="board-act" data-board-act="ai">AI Move</button>
+          </div>
+        </div>
+
+        <aside class="controls" aria-label="Puzzle settings">
+          <div class="settings">
+            <div class="phase-tabs" role="tablist" aria-label="Puzzle phase">
+              <button type="button" class="phase-btn" data-phase="opening" role="tab">Opening</button>
+              <button type="button" class="phase-btn" data-phase="middle" role="tab">Middlegame</button>
+              <button type="button" class="phase-btn is-active" data-phase="endgame" role="tab" aria-selected="true">Endgame</button>
+            </div>
+            <label class="setup-picker">
+              <span class="step-label" id="setup-label">Endgame</span>
+              <select id="setup-select" aria-label="Choose setup">
+                <option value="">Any setup</option>
+              </select>
+            </label>
+            <div class="step" data-setting="level">
+              <span class="step-label">Level</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Easier">−</button>
+              <span class="step-val" id="val-level">20</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="Harder">+</button>
+            </div>
+            <label class="level-slider">
+              <span class="step-label">1–100</span>
+              <input type="range" id="level-range" min="1" max="100" value="20" />
+            </label>
+            <p class="level-meta" id="level-meta">Guest ≈ 1222 Elo · Endgame · Short mates</p>
+          </div>
+
+          <button type="button" id="btn-hint" class="btn-secondary">Hint</button>
+          <button type="button" id="btn-ai" class="btn-secondary">AI Move</button>
+          <button type="button" id="btn-back" class="btn-secondary">Take back</button>
+          <button type="button" id="btn-next" class="btn-start">Next</button>
+
+          <div class="puzzle-name" id="puzzle-name" aria-live="polite">
+            <span class="puzzle-phase" id="puzzle-phase">Endgame</span>
+            <strong class="puzzle-title" id="puzzle-title">Loading…</strong>
+            <span class="puzzle-sub" id="puzzle-sub">Setup name appears here</span>
+          </div>
+
+          <div class="stats" aria-live="polite">
+            <div><span class="cap-label">Solved</span> <span id="solved">0</span></div>
+            <div><span class="cap-label">Streak</span> <span id="streak">0</span></div>
+            <div><span class="cap-label">Fails</span> <span id="fails">0</span></div>
+          </div>
+        </aside>
+
+        <aside class="guide-panel" aria-label="Guide and coach">
+          <div class="coach-note" id="coach-note" hidden>
+            <h3 class="coach-heading" id="coach-heading">Coach</h3>
+            <p class="coach-grade" id="coach-grade"></p>
+            <p class="coach-stars" id="coach-stars" aria-label="Move rating"></p>
+            <p class="coach-comment" id="coach-comment"></p>
+            <ul class="coach-fixes" id="coach-fixes"></ul>
+          </div>
+
+          <div class="lesson-guide">
+            <p class="info-kicker">How to play</p>
+            <h2 class="info-title">Puzzle drill</h2>
+            <p class="info-about" id="guide-about">
+              Keep playing until checkmate. Wrong tries get coach notes — they don’t end the puzzle.
+            </p>
+            <h3 class="info-heading">Basics</h3>
+            <ul class="info-basics">
+              <li>Pick Opening / Middlegame / Endgame, then a setup if you want.</li>
+              <li>Any legal moves are allowed — coach suggests better choices.</li>
+              <li>Puzzle clears only when you deliver checkmate.</li>
+              <li>Hint / AI Move / Take back anytime · Next loads another.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <p class="hint" id="hint">Find the best endgame move</p>
+    </div>
+
+    <script src="/chesspuzzles/puzzles.js?v=48"></script>
+  </body>
+</html>

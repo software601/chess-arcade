@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/minesweeper/minesweeper.css" />
+    <link rel="stylesheet" href="/viewport.css?v=40" />
+  </head>
+  <body>
+    <div class="stage">
+      <header class="hud">
+        <h1 class="brand">Mines</h1>
+        <nav class="nav">
+          <a href="/">Arcade</a>
+          <a href="/snake">Snake</a>
+          <a href="/pac-man">Pac-Man</a>
+          <a href="/hangman">Hangman</a>
+          <a href="/pong">Pong</a>
+          <a href="/breakout">Breakout</a>
+          <a href="/tetris">Tetris</a>
+          <a href="/flappy">Flappy</a>
+          <a href="/sokoban">Sokoban</a>
+          <a href="/connect4">Connect4</a>
+          <a href="/asteroids">Asteroids</a>
+          <a href="/minesweeper">Mines</a>
+          <a href="/space-invaders">Invaders</a>
+          <a href="/chess">Chess</a>
+          <a href="/chesspuzzles">Puzzles</a>
+          <a href="/chessmulti">Chess Multi</a>
+          <a href="/puzzlemulti">Puzzle Multi</a>
+          <a href="/chess001">001</a>
+          <a href="/chess002">002</a>
+        </nav>
+        <p class="score" aria-live="polite">
+          Mines <span id="mines-left">10</span>
+          · Time <span id="timer">0</span>
+        </p>
+      </header>
+
+      <div class="layout">
+        <aside class="controls" aria-label="Game settings">
+          <div class="settings">
+            <div class="step" data-setting="cols">
+              <span class="step-label">Width</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Narrower">−</button>
+              <span class="step-val" id="val-cols">9</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="Wider">+</button>
+            </div>
+            <div class="step" data-setting="rows">
+              <span class="step-label">Height</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Shorter">−</button>
+              <span class="step-val" id="val-rows">9</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="Taller">+</button>
+            </div>
+            <div class="step" data-setting="mines">
+              <span class="step-label">Mines</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Fewer mines">−</button>
+              <span class="step-val" id="val-mines">10</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="More mines">+</button>
+            </div>
+          </div>
+
+          <div class="presets" aria-label="Difficulty presets">
+            <button type="button" class="preset" data-preset="beginner">Beginner</button>
+            <button type="button" class="preset" data-preset="intermediate">Intermed.</button>
+            <button type="button" class="preset" data-preset="expert">Expert</button>
+          </div>
+
+          <div class="howto" id="howto">
+            <h2>How to play</h2>
+            <ol>
+              <li><strong>Left-click</strong> — reveal a cell</li>
+              <li><strong>Right-click</strong> — plant / clear a flag</li>
+              <li>Empty cells <strong>flood-fill</strong> neighbors</li>
+              <li>Clear every safe cell to win · hit a mine and you lose</li>
+              <li><strong>F</strong> flags under the cursor · <strong>Enter</strong> restarts</li>
+            </ol>
+          </div>
+
+          <button type="button" id="btn-start" class="btn-start">New</button>
+        </aside>
+
+        <div class="board-wrap fill-canvas">
+          <canvas id="board" width="540" height="540" aria-label="Minesweeper grid"></canvas>
+          <p class="overlay" id="overlay">Click a cell
+Right-click to flag</p>
+        </div>
+      </div>
+
+      <p class="hint" id="hint">First click is always safe · flood-fill opens empties</p>
+    </div>
+
+    <script src="/minesweeper/minesweeper.js"></script>
+  </body>
+</html>

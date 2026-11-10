@@ -1,0 +1,1 @@
+../chessmulti/stockfish-19.js

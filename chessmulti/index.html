@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Multi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/chessmulti/chess.css?v=46" />
+    <link rel="stylesheet" href="/viewport.css?v=48" />
+  </head>
+  <body>
+    <div class="stage">
+      <header class="hud">
+        <h1 class="brand">Chess Multi</h1>
+        <nav class="nav">
+          <a href="/">Arcade</a>
+          <a href="/chess">Chess</a>
+          <a href="/chesspuzzles">Puzzles</a>
+          <a href="/chessmulti" aria-current="page">Chess Multi</a>
+          <a href="/puzzlemulti">Puzzle Multi</a>
+          <a href="/chess001">001</a>
+          <a href="/chess002">002</a>
+          <a href="/chess003">003</a>
+          <a href="/chess004">004</a>
+          <a href="/chess005">005</a>
+          <a href="/chess006">006</a>
+          <a href="/chess007">007</a>
+          <a href="/chess008">008</a>
+        </nav>
+        <p class="score" aria-live="polite">
+          <span id="status">You = White</span>
+        </p>
+      </header>
+
+      <div class="layout">
+
+        <div class="board-wrap fill-canvas">
+          <canvas id="board" width="640" height="640" aria-label="Chess board"></canvas>
+          <p class="overlay" id="overlay" hidden></p>
+        
+
+          <div class="board-actions" aria-label="Board actions">
+            <button type="button" class="board-act board-act-go" data-board-act="new">New</button>
+            <button type="button" class="board-act" data-board-act="back">Take back</button>
+            <button type="button" class="board-act" data-board-act="hint">Hint</button>
+            <button type="button" class="board-act" data-board-act="ai">AI Move</button>
+          </div>
+        </div>
+
+        <aside class="controls" aria-label="Game settings">
+          <div class="settings">
+            <div class="step" data-setting="level">
+              <span class="step-label">Level</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Weaker">−</button>
+              <span class="step-val" id="val-level">20</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="Stronger">+</button>
+            </div>
+            <label class="level-slider">
+              <span class="step-label">1–100</span>
+              <input type="range" id="level-range" min="1" max="100" value="20" />
+            </label>
+            <p class="level-meta" id="level-meta">Guest ≈ 1222 Elo · fair vs CPU</p>
+          </div>
+
+          <button type="button" id="btn-hint" class="btn-secondary">Hint</button>
+          <button type="button" id="btn-ai" class="btn-secondary">AI Move</button>
+          <button type="button" id="btn-back" class="btn-secondary">Take back</button>
+          <button type="button" id="btn-start" class="btn-start">New</button>
+
+          <div class="setup-name" id="setup-name" aria-live="polite">
+            <span class="setup-phase" id="setup-phase">Opening</span>
+            <strong class="setup-title" id="setup-title">Starting Position</strong>
+            <span class="setup-sub" id="setup-sub">Named setup when you enter one</span>
+          </div>
+
+          <div class="captured" aria-live="polite">
+            <div class="cap-row">
+              <span class="cap-label">Taken</span>
+              <span id="cap-black" class="cap-pieces"></span>
+            </div>
+            <div class="cap-row">
+              <span class="cap-label">Lost</span>
+              <span id="cap-white" class="cap-pieces"></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <p class="hint" id="hint">Your turn · click a white piece</p>
+    </div>
+
+    <script src="/chessmulti/chess.js?v=48"></script>
+  </body>
+</html>

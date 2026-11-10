@@ -1,0 +1,1676 @@
+[
+  {
+    "n": 1,
+    "book": "fischer",
+    "title": "Queen Checkmate (1)",
+    "teach": "The queen attacks every square around the enemy king. Deliver mate on the back rank.",
+    "hint": "Look at the 7th/8th rank.",
+    "fen": "7k/5Q2/6K1/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "The queen attacks every square around the enemy king. Deliver mate on the back rank. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 2,
+    "book": "fischer",
+    "title": "Queen Checkmate (2)",
+    "teach": "A king + queen team mates by cutting escape squares, then checking.",
+    "hint": "Queen next to the king on the edge.",
+    "fen": "6k1/6Q1/5K2/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "A king + queen team mates by cutting escape squares, then checking. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 3,
+    "book": "fischer",
+    "title": "Queen Checkmate (3)",
+    "teach": "Corner and edge kings have fewer escapes \u2014 use that.",
+    "hint": "Slide the queen to the edge file.",
+    "fen": "5k2/8/4KQ2/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Corner and edge kings have fewer escapes \u2014 use that. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 4,
+    "book": "fischer",
+    "title": "Queen Checkmate (4)",
+    "teach": "Keep your king supporting the queen so she can sit safely near the enemy.",
+    "hint": "Queen to b7 or a7.",
+    "fen": "k7/8/1Q6/8/8/8/8/K7 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Keep your king supporting the queen so she can sit safely near the enemy. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 5,
+    "book": "fischer",
+    "title": "Queen vs Castled King",
+    "teach": "Pawns in front of a castled king can block its own escape.",
+    "hint": "Queen to the back rank or g-file.",
+    "fen": "7k/6pp/8/8/8/8/6Q1/6K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Pawns in front of a castled king can block its own escape. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 6,
+    "book": "fischer",
+    "title": "Close-Range Queen Mate",
+    "teach": "When kings face each other, the queen mates from a knight\u2019s move away\u2026 or closer with support.",
+    "hint": "Put the queen on g2 or h2.",
+    "fen": "8/8/8/8/8/5K1k/6Q1/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "When kings face each other, the queen mates from a knight\u2019s move away\u2026 or closer with support. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 7,
+    "book": "fischer",
+    "title": "Driving the King",
+    "teach": "First restrict, then mate. Here the mate is already one move away.",
+    "hint": "Queen to the h-file.",
+    "fen": "8/8/8/8/8/4K2k/8/6Q1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "First restrict, then mate. Here the mate is already one move away. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 8,
+    "book": "fischer",
+    "title": "Queen Through Pawns",
+    "teach": "Find the open line into the king\u2019s pocket.",
+    "hint": "Check along the file/diagonal that hits g7/h8.",
+    "fen": "8/5pk1/5p2/8/8/8/5Q2/6K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Find the open line into the king\u2019s pocket. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 9,
+    "book": "fischer",
+    "title": "Smother Idea",
+    "teach": "When the king\u2019s own pieces steal its squares, one check can finish it.",
+    "hint": "Queen into the crowded corner.",
+    "fen": "6rk/6pp/8/8/8/8/5Q2/6K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Smothered idea",
+    "about": "Smothered idea \u2014 Deliver checkmate.",
+    "desc": "When the king\u2019s own pieces steal its squares, one check can finish it. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The mating net only works if escape squares stay covered."
+    ]
+  },
+  {
+    "n": 10,
+    "book": "fischer",
+    "title": "Queen Mate Drill",
+    "teach": "Same pattern: edge king, supported queen.",
+    "hint": "Queen to the 7th or 8th.",
+    "fen": "7k/5Q2/7K/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Same pattern: edge king, supported queen. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 11,
+    "book": "fischer",
+    "title": "Queen Mate Drill (2)",
+    "teach": "Keep practicing: mate in one with king + queen.",
+    "hint": "Check from the f-file or h-file.",
+    "fen": "8/8/8/8/8/7k/5Q2/6K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Keep practicing: mate in one with king + queen. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 12,
+    "book": "fischer",
+    "title": "Queen Mate Drill (3)",
+    "teach": "Place the queen so every flight square is covered.",
+    "hint": "Queen adjacent on the file.",
+    "fen": "8/8/8/8/6Qk/8/5K2/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "Place the queen so every flight square is covered. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 13,
+    "book": "fischer",
+    "title": "Rook Mate Intro",
+    "teach": "A rook mates like a queen on ranks and files \u2014 use the edge.",
+    "hint": "Rook to the 8th rank.",
+    "fen": "7k/8/6KR/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Rook mate",
+    "about": "Rook mate \u2014 Deliver checkmate.",
+    "desc": "A rook mates like a queen on ranks and files \u2014 use the edge. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 14,
+    "book": "fischer",
+    "title": "Rook on the A-file",
+    "teach": "Box the king against the rim with rook + king.",
+    "hint": "Rook check on the a-file or 7th.",
+    "fen": "k7/8/1K5R/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Rook mate",
+    "about": "Rook mate \u2014 Deliver checkmate.",
+    "desc": "Box the king against the rim with rook + king. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 15,
+    "book": "fischer",
+    "title": "Back-Rank Mate",
+    "teach": "When the enemy king is trapped behind its own pawns, a rook on the back rank ends the game.",
+    "hint": "Rook to a8.",
+    "fen": "6k1/5ppp/8/8/8/8/8/R3K3 w Q - 0 1",
+    "goal": "mate",
+    "theme": "Back-rank",
+    "about": "Back-rank mate \u2014 the king is trapped behind its own pawns.",
+    "desc": "When the enemy king has no luft (escape square), a rook or queen on the back rank mates instantly. Classic beginner pattern.",
+    "pitfalls": [
+      "If they have h6/g6 luft, the back-rank mate fails.",
+      "Don't leave your own back rank soft while hunting theirs.",
+      "Check that the mating square isn't defended."
+    ]
+  },
+  {
+    "n": 16,
+    "book": "fischer",
+    "title": "Back-Rank Mate (2)",
+    "teach": "Always ask: is the back rank soft?",
+    "hint": "Rook (or queen) to the 8th.",
+    "fen": "r5k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Back-rank",
+    "about": "Back-rank \u2014 Deliver checkmate.",
+    "desc": "Always ask: is the back rank soft?. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 17,
+    "book": "fischer",
+    "title": "Back-Rank Mate (3)",
+    "teach": "Same motif from the a-file.",
+    "hint": "Rook lifts to a8.",
+    "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Back-rank",
+    "about": "Back-rank \u2014 Deliver checkmate.",
+    "desc": "Same motif from the a-file. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 18,
+    "book": "fischer",
+    "title": "Ladder Mate Start",
+    "teach": "Two rooks (or rook + queen) climb ranks like a ladder.",
+    "hint": "Check on the 7th, then the 8th later.",
+    "fen": "7k/8/6R1/8/8/8/8/R5K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Ladder",
+    "about": "Ladder mate \u2014 two heavy pieces climb rank by rank.",
+    "desc": "Use two rooks (or rook + queen) to check on successive ranks, driving the king to the edge and mating.",
+    "pitfalls": [
+      "Keep each checking piece safe from the king.",
+      "Don't check on a rank the king can capture from.",
+      "Avoid accidental stalemate if the king is already boxed."
+    ]
+  },
+  {
+    "n": 19,
+    "book": "fischer",
+    "title": "Corridor Mate",
+    "teach": "Rooks on open files cut the king\u2019s corridor.",
+    "hint": "Double on the e-file or check from the rim.",
+    "fen": "8/8/8/8/8/4k3/8/R3K2R w - - 0 1",
+    "goal": "mate",
+    "theme": "Corridor",
+    "about": "Corridor \u2014 Deliver checkmate.",
+    "desc": "Rooks on open files cut the king\u2019s corridor. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check."
+    ]
+  },
+  {
+    "n": 20,
+    "book": "fischer",
+    "title": "Rook Net",
+    "teach": "Coordinate rook + king so the enemy has no safe square.",
+    "hint": "Rook to the edge file next to the king.",
+    "fen": "8/8/8/8/8/k1K5/8/1R6 w - - 0 1",
+    "goal": "mate",
+    "theme": "Rook mate",
+    "about": "Rook mate \u2014 Deliver checkmate.",
+    "desc": "Coordinate rook + king so the enemy has no safe square. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 21,
+    "book": "fischer",
+    "title": "Rook Net (2)",
+    "teach": "Cut the king off, then checkmate.",
+    "hint": "Rook to c-file check.",
+    "fen": "8/8/8/8/8/k1K5/8/2R5 w - - 0 1",
+    "goal": "mate",
+    "theme": "Rook mate",
+    "about": "Rook mate \u2014 Deliver checkmate.",
+    "desc": "Cut the king off, then checkmate. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 22,
+    "book": "fischer",
+    "title": "Anastasia Pattern",
+    "teach": "Knight + rook: the knight covers escape squares the rook cannot.",
+    "hint": "Rook to the e-file/back rank with knight covering.",
+    "fen": "5rk1/5ppp/8/8/8/2N5/5PPP/4R1K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Pattern mate",
+    "about": "Pattern mate \u2014 Deliver checkmate.",
+    "desc": "Knight + rook: the knight covers escape squares the rook cannot. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The mating net only works if escape squares stay covered."
+    ]
+  },
+  {
+    "n": 23,
+    "book": "fischer",
+    "title": "Arabian Mate",
+    "teach": "Knight on f6/g6 ideas with a rook on the 7th/8th \u2014 classic mating net.",
+    "hint": "Rook to the 8th with knight covering g8/h8.",
+    "fen": "6k1/5R2/6N1/8/8/8/8/6K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Arabian",
+    "about": "Arabian \u2014 Deliver checkmate.",
+    "desc": "Knight on f6/g6 ideas with a rook on the 7th/8th \u2014 classic mating net. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The mating net only works if escape squares stay covered."
+    ]
+  },
+  {
+    "n": 24,
+    "book": "fischer",
+    "title": "Mate in Two (Queen)",
+    "teach": "Sometimes you check first to force the king, then mate.",
+    "hint": "Give a checking move that shrinks the box.",
+    "fen": "8/8/8/8/8/4K2k/8/5Q2 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 2",
+    "about": "Mate in 2 \u2014 Deliver checkmate.",
+    "desc": "Sometimes you check first to force the king, then mate. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 25,
+    "book": "fischer",
+    "title": "Mate in Two (Rook)",
+    "teach": "Force the king to the rim, then deliver.",
+    "hint": "Check that leaves only one flight.",
+    "fen": "8/8/8/8/8/5K1k/8/6R1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 2",
+    "about": "Mate in 2 \u2014 Deliver checkmate.",
+    "desc": "Force the king to the rim, then deliver. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 26,
+    "book": "fischer",
+    "title": "Mate in Two Drill",
+    "teach": "Programmed learning: find the forcing check.",
+    "hint": "Don\u2019t move the king first \u2014 use the heavy piece.",
+    "fen": "8/8/8/8/4K3/7k/8/5Q2 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 2",
+    "about": "Mate in 2 \u2014 Deliver checkmate.",
+    "desc": "Programmed learning: find the forcing check. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The first move must be forcing \u2014 quiet moves often let the defense reset."
+    ]
+  },
+  {
+    "n": 27,
+    "book": "fischer",
+    "title": "Two-Rook Ladder",
+    "teach": "Climb: check on one rank, then the next.",
+    "hint": "Rook to the 7th rank checking.",
+    "fen": "7k/8/8/8/8/8/6R1/R5K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Ladder",
+    "about": "Ladder \u2014 Deliver checkmate.",
+    "desc": "Climb: check on one rank, then the next. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 28,
+    "book": "fischer",
+    "title": "Mate in Two (Edge)",
+    "teach": "Kings on the edge fall faster.",
+    "hint": "Queen check that covers the flight square.",
+    "fen": "8/8/8/8/8/1K5k/8/7Q w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 2",
+    "about": "Mate in 2 \u2014 Deliver checkmate.",
+    "desc": "Kings on the edge fall faster. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The first move must be forcing \u2014 quiet moves often let the defense reset."
+    ]
+  },
+  {
+    "n": 29,
+    "book": "fischer",
+    "title": "Shrinking the Box",
+    "teach": "Queen checks that take squares away from the king.",
+    "hint": "Check from a distance first.",
+    "fen": "8/8/8/8/5K1k/8/6Q1/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 2",
+    "about": "Mate in 2 \u2014 Deliver checkmate.",
+    "desc": "Queen checks that take squares away from the king. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The first move must be forcing \u2014 quiet moves often let the defense reset."
+    ]
+  },
+  {
+    "n": 30,
+    "book": "fischer",
+    "title": "Ladder Climb",
+    "teach": "Two rooks: keep them safe from the king while checking.",
+    "hint": "Check far enough that the king cannot capture.",
+    "fen": "8/7k/8/8/8/8/1R6/1R4K1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Ladder",
+    "about": "Ladder \u2014 Deliver checkmate.",
+    "desc": "Two rooks: keep them safe from the king while checking. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 31,
+    "book": "fischer",
+    "title": "Mate in Three Intro",
+    "teach": "Plan: restrict \u2192 force \u2192 mate. First move still matters most.",
+    "hint": "Start by cutting the king off a rank/file.",
+    "fen": "8/8/8/8/8/4K2k/5Q2/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 3",
+    "about": "Mate in 3 \u2014 Deliver checkmate.",
+    "desc": "Plan: restrict \u2192 force \u2192 mate. First move still matters most. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The first move must be forcing \u2014 quiet moves often let the defense reset."
+    ]
+  },
+  {
+    "n": 32,
+    "book": "fischer",
+    "title": "Rook Technique",
+    "teach": "Use the rook to cut the board in half.",
+    "hint": "Cut the king to the edge before mating.",
+    "fen": "8/8/8/8/5K2/7k/8/6R1 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 3",
+    "about": "Mate in 3 \u2014 Deliver checkmate.",
+    "desc": "Use the rook to cut the board in half. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't put the rook where the king can capture it."
+    ]
+  },
+  {
+    "n": 33,
+    "book": "fischer",
+    "title": "Queen Technique",
+    "teach": "King opposition + queen checks = short mate.",
+    "hint": "Bring the king closer while checking.",
+    "fen": "8/8/8/7k/5K2/8/6Q1/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 3",
+    "about": "Mate in 3 \u2014 Deliver checkmate.",
+    "desc": "King opposition + queen checks = short mate. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 34,
+    "book": "fischer",
+    "title": "Deep Net",
+    "teach": "Don\u2019t rush a stalemate \u2014 leave a flight until mate is ready.",
+    "hint": "Avoid stalemate; keep giving checks that progress.",
+    "fen": "8/8/8/8/8/2K4k/8/3Q4 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mating net",
+    "about": "Mating net \u2014 Deliver checkmate.",
+    "desc": "Don\u2019t rush a stalemate \u2014 leave a flight until mate is ready. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check."
+    ]
+  },
+  {
+    "n": 35,
+    "book": "fischer",
+    "title": "Avoid Stalemate",
+    "teach": "With king + queen, stalemate is the main trap for beginners.",
+    "hint": "Give a check, or leave the king a square.",
+    "fen": "8/8/8/8/5K2/6k1/8/5Q2 w - - 0 1",
+    "goal": "mate",
+    "theme": "Mate in 4",
+    "about": "Mate in 4 \u2014 Deliver checkmate.",
+    "desc": "With king + queen, stalemate is the main trap for beginners. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "The first move must be forcing \u2014 quiet moves often let the defense reset."
+    ]
+  },
+  {
+    "n": 36,
+    "book": "fischer",
+    "title": "Corner Drive",
+    "teach": "Drive toward a corner, then mate.",
+    "hint": "Force toward a8/h8/a1/h1.",
+    "fen": "8/8/8/8/8/5k2/8/4KQ2 w - - 0 1",
+    "goal": "mate",
+    "theme": "K+Q",
+    "about": "K+Q \u2014 Deliver checkmate.",
+    "desc": "Drive toward a corner, then mate. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Stalemate is the classic trap when the lone king is on the edge."
+    ]
+  },
+  {
+    "n": 37,
+    "book": "fischer",
+    "title": "Near Mate",
+    "teach": "One accurate queen move ends it.",
+    "hint": "Find the safe checking square.",
+    "fen": "8/8/8/8/8/7k/5Q2/5K2 w - - 0 1",
+    "goal": "mate",
+    "theme": "Queen mate",
+    "about": "Queen mate \u2014 Deliver checkmate.",
+    "desc": "One accurate queen move ends it. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed."
+    ]
+  },
+  {
+    "n": 38,
+    "book": "fischer",
+    "title": "Scholar Pattern Prep",
+    "teach": "Early mates punish unused pieces and open diagonals to f7/h7.",
+    "hint": "Look at the diagonal into the king.",
+    "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 0 4",
+    "goal": "mate",
+    "theme": "Scholar idea",
+    "about": "Scholar idea \u2014 Deliver checkmate.",
+    "desc": "Early mates punish unused pieces and open diagonals to f7/h7. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't weaken f7/f2 early without development."
+    ]
+  },
+  {
+    "n": 39,
+    "book": "fischer",
+    "title": "Fool\u2019s Mate Pattern",
+    "teach": "Weakening f- and g-pawns early can lose instantly.",
+    "hint": "Queen to h5 mates.",
+    "fen": "rnbqkbnr/ppppp2p/5p2/6p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3",
+    "goal": "mate",
+    "theme": "Fool's mate",
+    "about": "Fool's mate \u2014 Deliver checkmate.",
+    "desc": "Weakening f- and g-pawns early can lose instantly. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't weaken f7/f2 early without development."
+    ]
+  },
+  {
+    "n": 40,
+    "book": "fischer",
+    "title": "Legal-Style Alert",
+    "teach": "Loose pieces + unsafe king = tactical finish. Look for discovered ideas.",
+    "hint": "Capture/check that opens a line.",
+    "fen": "r2qkbnr/ppp2ppp/2np4/4N3/2B1P1b1/8/PPPP1PPP/RNBQK2R w KQkq - 0 6",
+    "goal": "mate",
+    "theme": "Opening trap",
+    "about": "Opening trap \u2014 Deliver checkmate.",
+    "desc": "Loose pieces + unsafe king = tactical finish. Look for discovered ideas. Play the forcing move that ends the game. (Programmed mate patterns \u2014 force the king with clear checks)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Don't weaken f7/f2 early without development."
+    ]
+  },
+  {
+    "n": 41,
+    "book": "seirawan",
+    "title": "Force: Take the Free Piece",
+    "teach": "Material (force) wins games. An undefended piece is a gift \u2014 collect it.",
+    "hint": "Capture the hanging piece.",
+    "fen": "4k3/8/8/3n4/8/8/4Q3/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "Material (force) wins games. An undefended piece is a gift \u2014 collect it. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move."
+    ]
+  },
+  {
+    "n": 42,
+    "book": "seirawan",
+    "title": "Force: Trade Up",
+    "teach": "Trade your lesser force for greater force when the capture is safe.",
+    "hint": "Take the higher-value piece.",
+    "fen": "4k3/8/8/3r4/8/3N4/8/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "Trade your lesser force for greater force when the capture is safe. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move.",
+      "Trade pieces when ahead, but keep enough pawns to win."
+    ]
+  },
+  {
+    "n": 43,
+    "book": "seirawan",
+    "title": "Force: Queen Hanging",
+    "teach": "Always ask: is anything en prise? Count attackers vs defenders.",
+    "hint": "Take the unprotected queen.",
+    "fen": "4k3/8/8/3q4/8/8/3R4/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "Always ask: is anything en prise? Count attackers vs defenders. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Keep the queen safe from the enemy king \u2014 check from a distance when needed.",
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move."
+    ]
+  },
+  {
+    "n": 44,
+    "book": "seirawan",
+    "title": "Force: Equal Trade?",
+    "teach": "Don\u2019t trade your queen for a rook unless you get more (mate/attack). Prefer winning force.",
+    "hint": "Win material without giving equal value back.",
+    "fen": "4k3/8/2q5/8/8/8/3R4/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "Don\u2019t trade your queen for a rook unless you get more (mate/attack). Prefer winning force. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move.",
+      "Trade pieces when ahead, but keep enough pawns to win."
+    ]
+  },
+  {
+    "n": 45,
+    "book": "seirawan",
+    "title": "Force: Two Attackers",
+    "teach": "When you attack a piece twice and it is defended once, you win force.",
+    "hint": "Capture with the right piece first.",
+    "fen": "4k3/8/8/3n4/8/2N5/3R4/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "When you attack a piece twice and it is defended once, you win force. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move."
+    ]
+  },
+  {
+    "n": 46,
+    "book": "seirawan",
+    "title": "Force: Safe Capture",
+    "teach": "Before capturing, check that your piece isn\u2019t hanging afterward.",
+    "hint": "Capture that stays defended or escapes.",
+    "fen": "4k3/8/8/3b4/8/8/3Q4/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "Before capturing, check that your piece isn\u2019t hanging afterward. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move."
+    ]
+  },
+  {
+    "n": 47,
+    "book": "seirawan",
+    "title": "Force: Knight Fork",
+    "teach": "A knight fork hits two targets at once \u2014 often king and queen.",
+    "hint": "Check that also attacks the queen.",
+    "fen": "6k1/4q3/8/5N2/8/8/8/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "A knight fork hits two targets at once \u2014 often king and queen. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move."
+    ]
+  },
+  {
+    "n": 48,
+    "book": "seirawan",
+    "title": "Force: Skewer Preview",
+    "teach": "A skewer checks the king and wins the piece behind it.",
+    "hint": "Rook check on the h-file.",
+    "fen": "7k/7r/8/8/8/8/7R/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Force",
+    "about": "Force \u2014 Find the best teaching move.",
+    "desc": "A skewer checks the king and wins the piece behind it. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Count attackers and defenders before you capture.",
+      "Don't grab material that hangs your own piece next move."
+    ]
+  },
+  {
+    "n": 49,
+    "book": "seirawan",
+    "title": "Time: Develop with Tempo",
+    "teach": "Time = moves. Developing while threatening gains a free tempo.",
+    "hint": "Develop and threaten at once.",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "Time = moves. Developing while threatening gains a free tempo. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 50,
+    "book": "seirawan",
+    "title": "Time: Punish Sleeping Pieces",
+    "teach": "If the opponent ignores development, open lines and strike.",
+    "hint": "Open a center file or aim at f7.",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "If the opponent ignores development, open lines and strike. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 51,
+    "book": "seirawan",
+    "title": "Time: Castle Early",
+    "teach": "Getting the king safe is a tempo well spent \u2014 then your rook joins the fight.",
+    "hint": "Castle (or prepare it) before launching.",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 0 5",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "Getting the king safe is a tempo well spent \u2014 then your rook joins the fight. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 52,
+    "book": "seirawan",
+    "title": "Time: Don\u2019t Move Twice",
+    "teach": "Moving the same piece again in the opening often wastes time. Prefer a new piece.",
+    "hint": "Develop an undeveloped piece.",
+    "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "Moving the same piece again in the opening often wastes time. Prefer a new piece. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 53,
+    "book": "seirawan",
+    "title": "Time: Capture with Tempo",
+    "teach": "Captures that also develop or check buy time.",
+    "hint": "Capture that develops/checks.",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "Captures that also develop or check buy time. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 54,
+    "book": "seirawan",
+    "title": "Time: Initiative",
+    "teach": "Keep making threats so the opponent answers instead of developing.",
+    "hint": "Make a concrete threat.",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p1N1/2B1P3/8/PPPP1PPP/RNBQK2R w KQkq - 0 5",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "Keep making threats so the opponent answers instead of developing. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 55,
+    "book": "seirawan",
+    "title": "Time: Recapture Fast",
+    "teach": "After a capture, recapture promptly unless there\u2019s a stronger tactic.",
+    "hint": "Restore material balance correctly.",
+    "fen": "rnbqkb1r/pppp1ppp/5n2/4N3/4P3/8/PPPP1PPP/RNBQKB1R b KQkq - 0 3",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "After a capture, recapture promptly unless there\u2019s a stronger tactic. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 56,
+    "book": "seirawan",
+    "title": "Time: Race to Attack",
+    "teach": "In opposite-side castling races, every tempo counts \u2014 hit first.",
+    "hint": "Start the pawn storm or piece lift.",
+    "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/2KR1B1R w - - 0 10",
+    "goal": "win",
+    "theme": "Time",
+    "about": "Time \u2014 Find the best teaching move.",
+    "desc": "In opposite-side castling races, every tempo counts \u2014 hit first. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Avoid moving the same piece twice in the opening without a reason.",
+      "Don't hunt pawns while your king is still in the center."
+    ]
+  },
+  {
+    "n": 57,
+    "book": "seirawan",
+    "title": "Space: Claim the Center",
+    "teach": "Space lets your pieces move; occupy or control d4/e4/d5/e5.",
+    "hint": "Play a central pawn break or occupy the center.",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "Space lets your pieces move; occupy or control d4/e4/d5/e5. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 58,
+    "book": "seirawan",
+    "title": "Space: Cramp the Enemy",
+    "teach": "Advance pawns to take squares from enemy pieces.",
+    "hint": "Gain space with a pawn that isn\u2019t hanging.",
+    "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "Advance pawns to take squares from enemy pieces. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 59,
+    "book": "seirawan",
+    "title": "Space: Outpost Square",
+    "teach": "A knight on a hole (no enemy pawn can kick it) dominates.",
+    "hint": "Plant the knight on the outpost.",
+    "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1B3/PPP1BPPP/R2Q1RK1 w - - 0 10",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "A knight on a hole (no enemy pawn can kick it) dominates. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 60,
+    "book": "seirawan",
+    "title": "Space: Don\u2019t Overextend",
+    "teach": "Space is useless if your pawns become targets. Support advances.",
+    "hint": "Advance only if you can defend the new weaknesses.",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "Space is useless if your pawns become targets. Support advances. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 61,
+    "book": "seirawan",
+    "title": "Space: Open Lines",
+    "teach": "When you have more space, open files for rooks.",
+    "hint": "Pawn break that opens a file.",
+    "fen": "r1bq1rk1/ppp2ppp/2n2n2/3pp3/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 0 8",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "When you have more space, open files for rooks. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 62,
+    "book": "seirawan",
+    "title": "Space: Restrict Pieces",
+    "teach": "Use pawns and pieces to deny the enemy good squares.",
+    "hint": "Take away the knight\u2019s best hop.",
+    "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 4",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "Use pawns and pieces to deny the enemy good squares. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 63,
+    "book": "seirawan",
+    "title": "Space: Central Majority",
+    "teach": "A pawn majority in the center can create a passed pawn later.",
+    "hint": "Push the majority carefully.",
+    "fen": "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+    "goal": "win",
+    "theme": "Space",
+    "about": "Space \u2014 Find the best teaching move.",
+    "desc": "A pawn majority in the center can create a passed pawn later. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free."
+    ]
+  },
+  {
+    "n": 64,
+    "book": "seirawan",
+    "title": "Pawns: Passed Pawn",
+    "teach": "A passed pawn has no enemy pawns in its path \u2014 escort it.",
+    "hint": "Advance or support the passer.",
+    "fen": "8/8/8/3k4/8/3P4/8/3K4 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "d3d4",
+    "about": "Passed pawn \u2014 escort it, don't abandon it.",
+    "desc": "A passed pawn has a clear road to promotion. Advance it with king support so the enemy king can't blockade forever.",
+    "pitfalls": [
+      "Pushing too early can leave the pawn en prise.",
+      "If the enemy king reaches the square in front, the pawn may be stuck.",
+      "Don't wander with the king away from the passer."
+    ]
+  },
+  {
+    "n": 65,
+    "book": "seirawan",
+    "title": "Pawns: Outside Passer",
+    "teach": "An outside passed pawn distracts the enemy king.",
+    "hint": "Push the outside pawn to pull their king away.",
+    "fen": "8/8/8/1k6/8/1P6/8/1K6 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "b3b4",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "An outside passed pawn distracts the enemy king. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 66,
+    "book": "seirawan",
+    "title": "Pawns: Isolated Pawn",
+    "teach": "An isolated pawn can be a target \u2014 attack it or use the open files.",
+    "hint": "Pressure the isolani or occupy the file.",
+    "fen": "r1bq1rk1/pp3ppp/2n1pn2/3p4/3P4/2N1PN2/PP2BPPP/R1BQ1RK1 w - - 0 10",
+    "goal": "win",
+    "theme": "Pawns",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "An isolated pawn can be a target \u2014 attack it or use the open files. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 67,
+    "book": "seirawan",
+    "title": "Pawns: Doubled Pawns",
+    "teach": "Doubled pawns are often weak; attack the front one.",
+    "hint": "Target the doubled file.",
+    "fen": "rnbqkbnr/pppp1ppp/8/8/4p3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 3",
+    "goal": "win",
+    "theme": "Pawns",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "Doubled pawns are often weak; attack the front one. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 68,
+    "book": "seirawan",
+    "title": "Pawns: Pawn Break",
+    "teach": "Break with \u2026c5/\u2026e5 (or c4/e4) to free your position.",
+    "hint": "Play the freeing pawn break.",
+    "fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R b KQkq - 0 5",
+    "goal": "win",
+    "theme": "Pawns",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "Break with \u2026c5/\u2026e5 (or c4/e4) to free your position. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 69,
+    "book": "seirawan",
+    "title": "Pawns: Chain Base",
+    "teach": "Attack the base of a pawn chain, not the tip.",
+    "hint": "Hit the rearmost pawn of the chain.",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+    "goal": "win",
+    "theme": "Pawns",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "Attack the base of a pawn chain, not the tip. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 70,
+    "book": "seirawan",
+    "title": "Pawns: Connected Passers",
+    "teach": "Connected passed pawns protect each other \u2014 advance together.",
+    "hint": "Push the pair; don\u2019t leave one hanging.",
+    "fen": "8/8/8/3k4/8/3PP3/4K3/8 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "d3d4",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "Connected passed pawns protect each other \u2014 advance together. Prefer the clean principle move over flashy side lines. (Core principles: force, time, space, and pawn structure)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 71,
+    "book": "capablanca",
+    "title": "K+Q vs K: Cut Off",
+    "teach": "Use the queen like a barrier \u2014 cut the king to the edge before mating.",
+    "hint": "Cut a rank/file away from the king.",
+    "fen": "8/8/8/8/8/3K3k/8/4Q3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "move": "e1e4",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Use the queen like a barrier \u2014 cut the king to the edge before mating. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 72,
+    "book": "capablanca",
+    "title": "K+Q vs K: Opposition",
+    "teach": "Bring your king to oppose theirs; the queen alone rarely mates without help.",
+    "hint": "Improve the king.",
+    "fen": "8/8/8/8/8/4k3/8/3QK3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Bring your king to oppose theirs; the queen alone rarely mates without help. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 73,
+    "book": "capablanca",
+    "title": "K+Q vs K: Safe Checks",
+    "teach": "Check from a distance so the king cannot capture the queen.",
+    "hint": "Check far enough away.",
+    "fen": "8/8/8/8/8/3k4/3Q4/3K4 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Check from a distance so the king cannot capture the queen. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 74,
+    "book": "capablanca",
+    "title": "K+Q vs K: Avoid Stalemate",
+    "teach": "Leave the enemy king a square until mate is forced.",
+    "hint": "Don\u2019t take the last flight too early.",
+    "fen": "8/8/8/8/8/4k3/4Q3/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Leave the enemy king a square until mate is forced. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 75,
+    "book": "capablanca",
+    "title": "K+R vs K: Cut the Board",
+    "teach": "The rook cuts the king off; your king then helps deliver mate.",
+    "hint": "Cut with the rook on a rank.",
+    "fen": "8/8/8/8/8/3K3k/8/4R3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "The rook cuts the king off; your king then helps deliver mate. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 76,
+    "book": "capablanca",
+    "title": "K+R vs K: Wait Move",
+    "teach": "Sometimes a quiet rook move waits for opposition.",
+    "hint": "A waiting check or tempo move.",
+    "fen": "8/8/8/8/8/2k5/2R5/2K5 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Sometimes a quiet rook move waits for opposition. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 77,
+    "book": "capablanca",
+    "title": "K+R vs K: Edge Mate",
+    "teach": "Mate with rook on the edge file, king opposing.",
+    "hint": "Rook to the edge when kings oppose.",
+    "fen": "8/8/8/8/8/5k2/5R2/5K2 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Mate with rook on the edge file, king opposing. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 78,
+    "book": "capablanca",
+    "title": "K+R vs K: Box Smaller",
+    "teach": "Shrink the box each move \u2014 never let the king out.",
+    "hint": "Reduce the rectangle around the king.",
+    "fen": "8/8/8/8/8/4k3/4R3/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Shrink the box each move \u2014 never let the king out. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 79,
+    "book": "capablanca",
+    "title": "Opposition Basics",
+    "teach": "Kings face with one square between \u2014 the side not to move often yields ground.",
+    "hint": "Take the opposition with your king.",
+    "fen": "8/8/8/3k4/8/3K4/8/3R4 w - - 0 1",
+    "goal": "win",
+    "theme": "Opposition",
+    "about": "Opposition \u2014 Find the best teaching move.",
+    "desc": "Kings face with one square between \u2014 the side not to move often yields ground. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 80,
+    "book": "capablanca",
+    "title": "Key Squares",
+    "teach": "For a pawn to queen, the king must reach key squares in front of it.",
+    "hint": "King to a key square, then push.",
+    "fen": "8/8/8/3k4/8/3P4/8/3K4 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "d1d2",
+    "about": "Key squares \u2014 the king must arrive before the pawn runs.",
+    "desc": "In king + pawn endings, certain squares in front of the pawn decide the win. Bring your king there, then advance.",
+    "pitfalls": [
+      "Pushing the pawn first often draws if the enemy king gets opposition.",
+      "Wrong king move can hand them the opposition.",
+      "Don't allow a blockade on the promotion path."
+    ]
+  },
+  {
+    "n": 81,
+    "book": "capablanca",
+    "title": "King + Pawn Win",
+    "teach": "With opposition and a protected path, the pawn promotes.",
+    "hint": "Gain opposition, then advance.",
+    "fen": "8/8/8/8/3k4/8/3P4/3K4 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "d1d2",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "With opposition and a protected path, the pawn promotes. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 82,
+    "book": "capablanca",
+    "title": "Shouldering",
+    "teach": "Use your king to shoulder the enemy king away from the pawn.",
+    "hint": "King move that blocks theirs.",
+    "fen": "8/8/8/4k3/8/3P4/8/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "e1d2",
+    "about": "Pawns \u2014 Find the best teaching move.",
+    "desc": "Use your king to shoulder the enemy king away from the pawn. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't push the pawn so far that the enemy king blockades it forever.",
+      "King first \u2014 often the king must reach a key square before the pawn runs.",
+      "Opposition matters: the wrong king move can turn a win into a draw."
+    ]
+  },
+  {
+    "n": 83,
+    "book": "capablanca",
+    "title": "Rook Cutoff",
+    "teach": "In endings, cutting the enemy king off with a rook is Capablanca-simple and strong.",
+    "hint": "Rook to a cutting file/rank.",
+    "fen": "8/8/8/3k4/8/8/8/3RKR2 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "In endings, cutting the enemy king off with a rook is Capablanca-simple and strong. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't put the rook where the king can capture it.",
+      "On back-rank mates, make sure the escape square (luft) isn't open.",
+      "Stalemate is the classic trap when the lone king is on the edge."
+    ]
+  },
+  {
+    "n": 84,
+    "book": "capablanca",
+    "title": "Simplify When Ahead",
+    "teach": "When up material, trade pieces (not always pawns) to clarify the win.",
+    "hint": "Offer or force a favorable trade.",
+    "fen": "4k3/8/8/3q4/3Q4/8/8/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Strategy",
+    "move": "d4d5",
+    "about": "Strategy \u2014 Find the best teaching move.",
+    "desc": "When up material, trade pieces (not always pawns) to clarify the win. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Trade pieces when ahead, but keep enough pawns to win.",
+      "Don't trade into a drawn ending (wrong bishop, bare king issues)."
+    ]
+  },
+  {
+    "n": 85,
+    "book": "capablanca",
+    "title": "Activity Over Passivity",
+    "teach": "Active pieces beat passive ones even at equal material.",
+    "hint": "Activate the passive piece.",
+    "fen": "4k3/8/8/8/8/8/3R4/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Strategy",
+    "move": "d2d7",
+    "about": "Strategy \u2014 Find the best teaching move.",
+    "desc": "Active pieces beat passive ones even at equal material. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Trade pieces when ahead, but keep enough pawns to win.",
+      "Don't trade into a drawn ending (wrong bishop, bare king issues)."
+    ]
+  },
+  {
+    "n": 86,
+    "book": "capablanca",
+    "title": "Two Bishops Intro",
+    "teach": "The bishop pair likes open diagonals \u2014 open the center.",
+    "hint": "Open a diagonal or centralize a bishop.",
+    "fen": "8/8/8/8/7k/8/3BB3/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "The bishop pair likes open diagonals \u2014 open the center. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 87,
+    "book": "capablanca",
+    "title": "Knight vs Bishop Sense",
+    "teach": "Knights want outposts; bishops want open diagonals. Choose the plan that fits.",
+    "hint": "Improve the minor piece\u2019s square.",
+    "fen": "8/8/8/3k4/8/3N4/3P4/3K4 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "about": "Endgame \u2014 Find the best teaching move.",
+    "desc": "Knights want outposts; bishops want open diagonals. Choose the plan that fits. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Stalemate is the classic trap when the lone king is on the edge.",
+      "Cut the king off before delivering mate \u2014 don't rush."
+    ]
+  },
+  {
+    "n": 88,
+    "book": "capablanca",
+    "title": "Passed Pawn Push",
+    "teach": "Passed pawns must be pushed \u2014 but escorted.",
+    "hint": "Advance the passer with king support.",
+    "fen": "8/8/4k3/8/4P3/4K3/8/8 w - - 0 1",
+    "goal": "win",
+    "theme": "Pawns",
+    "move": "e4e5",
+    "about": "Passed pawn push \u2014 advance with escort.",
+    "desc": "Passed pawns must be pushed, but the king should support the advance so the enemy can't simply blockade or capture.",
+    "pitfalls": [
+      "A naked pawn push can drop the pawn.",
+      "Don't let their king step in front of the passer.",
+      "Opposition and shouldering still matter while you advance."
+    ]
+  },
+  {
+    "n": 89,
+    "book": "capablanca",
+    "title": "Lucena Idea",
+    "teach": "In rook endings, building a bridge frees the king from checks.",
+    "hint": "Prepare the bridge / cut checks.",
+    "fen": "1K1k4/1P6/8/8/8/8/8/1R6 w - - 0 1",
+    "goal": "win",
+    "theme": "Rook ending",
+    "about": "Rook ending \u2014 Find the best teaching move.",
+    "desc": "In rook endings, building a bridge frees the king from checks. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't put the rook where the king can capture it.",
+      "On back-rank mates, make sure the escape square (luft) isn't open.",
+      "Stalemate is the classic trap when the lone king is on the edge."
+    ]
+  },
+  {
+    "n": 90,
+    "book": "capablanca",
+    "title": "Philidor Idea",
+    "teach": "Defending rook endings: keep the rook active on the 3rd/6th rank ideas.",
+    "hint": "Active rook defense.",
+    "fen": "8/8/8/4k3/3R4/8/4P3/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Rook ending",
+    "about": "Rook ending \u2014 Find the best teaching move.",
+    "desc": "Defending rook endings: keep the rook active on the 3rd/6th rank ideas. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't put the rook where the king can capture it.",
+      "On back-rank mates, make sure the escape square (luft) isn't open.",
+      "Stalemate is the classic trap when the lone king is on the edge."
+    ]
+  },
+  {
+    "n": 91,
+    "book": "capablanca",
+    "title": "Opening: Center First",
+    "teach": "Capablanca: occupy the center, develop rapidly, castle.",
+    "hint": "Central pawn or developing move.",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+    "goal": "win",
+    "theme": "Opening",
+    "about": "Opening \u2014 Find the best teaching move.",
+    "desc": "Capablanca: occupy the center, develop rapidly, castle. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't overextend pawns you can't defend.",
+      "An outpost is useless if the piece can be traded off for free.",
+      "Don't weaken f7/f2 early without development."
+    ]
+  },
+  {
+    "n": 92,
+    "book": "capablanca",
+    "title": "Opening: Knights Before Bishops",
+    "teach": "A simple rule of thumb: knights before bishops in many quiet openings.",
+    "hint": "Develop a knight.",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+    "goal": "win",
+    "theme": "Opening",
+    "about": "Opening \u2014 Find the best teaching move.",
+    "desc": "A simple rule of thumb: knights before bishops in many quiet openings. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't weaken f7/f2 early without development.",
+      "Early queen raids often lose time if they don't win material or mate."
+    ]
+  },
+  {
+    "n": 93,
+    "book": "capablanca",
+    "title": "Opening: Don\u2019t Grab Poison",
+    "teach": "Early queen raids often lose time \u2014 develop instead unless the raid wins force.",
+    "hint": "Prefer development over early queen hunting.",
+    "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5Q2/PPPP1PPP/RNB1KBNR b KQkq - 0 2",
+    "goal": "win",
+    "theme": "Opening",
+    "about": "Opening \u2014 Find the best teaching move.",
+    "desc": "Early queen raids often lose time \u2014 develop instead unless the raid wins force. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't weaken f7/f2 early without development.",
+      "Early queen raids often lose time if they don't win material or mate."
+    ]
+  },
+  {
+    "n": 94,
+    "book": "capablanca",
+    "title": "Middle: Piece Coordination",
+    "teach": "Pieces work best together \u2014 aim multiple attackers at one weakness.",
+    "hint": "Double on a file or target.",
+    "fen": "r1bq1rk1/ppp2ppp/2n2n2/3pp3/4P3/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 0 8",
+    "goal": "win",
+    "theme": "Middlegame",
+    "about": "Middlegame \u2014 Find the best teaching move.",
+    "desc": "Pieces work best together \u2014 aim multiple attackers at one weakness. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Look for the opponent's reply before you commit.",
+      "If your move isn't forcing, ask what they threaten next."
+    ]
+  },
+  {
+    "n": 95,
+    "book": "capablanca",
+    "title": "Middle: Weak Squares",
+    "teach": "Occupy weak squares (holes) that pawns can no longer guard.",
+    "hint": "Knight or piece into the hole.",
+    "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/3NP3/2N1B3/PPP1BPPP/R2Q1RK1 w - - 0 10",
+    "goal": "win",
+    "theme": "Middlegame",
+    "about": "Middlegame \u2014 Find the best teaching move.",
+    "desc": "Occupy weak squares (holes) that pawns can no longer guard. Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Look for the opponent's reply before you commit.",
+      "If your move isn't forcing, ask what they threaten next."
+    ]
+  },
+  {
+    "n": 96,
+    "book": "capablanca",
+    "title": "Endgame: King Activity",
+    "teach": "In endings the king is an attacking piece \u2014 centralize it.",
+    "hint": "Bring the king toward the center/action.",
+    "fen": "8/8/8/4k3/8/8/8/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Endgame",
+    "move": "e1e2",
+    "about": "King activity \u2014 in endings the king is an attacker.",
+    "desc": "Centralize the king. In simplified positions the king fights; leaving it on the back rank wastes a piece.",
+    "pitfalls": [
+      "Don't walk into checks you can't answer.",
+      "Approach carefully against a remaining heavy piece.",
+      "Activity beats passive waiting when material is equal."
+    ]
+  },
+  {
+    "n": 97,
+    "book": "capablanca",
+    "title": "Endgame: Rook Behind Passer",
+    "teach": "Rooks belong behind passed pawns (yours or theirs).",
+    "hint": "Put the rook behind the pawn.",
+    "fen": "8/8/8/8/4k3/8/3PR3/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Rook ending",
+    "move": "d2d4",
+    "about": "Rook ending \u2014 Find the best teaching move.",
+    "desc": "Rooks belong behind passed pawns (yours or theirs). Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't put the rook where the king can capture it.",
+      "On back-rank mates, make sure the escape square (luft) isn't open.",
+      "Don't push the pawn so far that the enemy king blockades it forever."
+    ]
+  },
+  {
+    "n": 98,
+    "book": "capablanca",
+    "title": "Endgame: Trade Into Win",
+    "teach": "Trade into a known winning ending (K+Q, K+R, good pawn ending).",
+    "hint": "Simplify into a clear win.",
+    "fen": "4k3/8/8/3r4/3Q4/8/8/4K3 w - - 0 1",
+    "goal": "win",
+    "theme": "Strategy",
+    "about": "Strategy \u2014 Find the best teaching move.",
+    "desc": "Trade into a known winning ending (K+Q, K+R, good pawn ending). Prefer the clean principle move over flashy side lines. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Trade pieces when ahead, but keep enough pawns to win.",
+      "Don't trade into a drawn ending (wrong bishop, bare king issues)."
+    ]
+  },
+  {
+    "n": 99,
+    "book": "capablanca",
+    "title": "Mate Pattern Review",
+    "teach": "Combine ideas: cut off, check, cover flights.",
+    "hint": "Deliver the mating move.",
+    "fen": "7k/5K1R/8/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Review",
+    "about": "Review \u2014 Deliver checkmate.",
+    "desc": "Combine ideas: cut off, check, cover flights. Play the forcing move that ends the game. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Re-check that every flight square is covered before you take the king's last square."
+    ]
+  },
+  {
+    "n": 100,
+    "book": "capablanca",
+    "title": "Final Drill: Clean Mate",
+    "teach": "Finish cleanly \u2014 checkmate without stalemate.",
+    "hint": "Mate in one.",
+    "fen": "6k1/4K3/5R2/8/8/8/8/8 w - - 0 1",
+    "goal": "mate",
+    "theme": "Review",
+    "about": "Review \u2014 Deliver checkmate.",
+    "desc": "Finish cleanly \u2014 checkmate without stalemate. Play the forcing move that ends the game. (Simple fundamentals \u2014 endgames, activity, and clean technique)",
+    "pitfalls": [
+      "Don't settle for a check that lets the king escape.",
+      "Watch for stalemate when the king has no legal moves but isn't in check.",
+      "Re-check that every flight square is covered before you take the king's last square."
+    ]
+  }
+]

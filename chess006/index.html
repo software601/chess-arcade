@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess 006 · Kotov Fischer Bronstein</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/viewport.css?v=48" />
+    <link rel="stylesheet" href="/chess006/lessons.css?v=46" />
+  </head>
+  <body>
+    <div class="stage">
+      <header class="hud">
+        <h1 class="brand">Chess 006</h1>
+        <nav class="nav">
+          <a href="/">Arcade</a>
+          <a href="/chess">Chess</a>
+          <a href="/chesspuzzles">Puzzles</a>
+          <a href="/chessmulti">Chess Multi</a>
+          <a href="/puzzlemulti">Puzzle Multi</a>
+          <a href="/chess001">001</a>
+          <a href="/chess002">002</a>
+          <a href="/chess003">003</a>
+          <a href="/chess004">004</a>
+          <a href="/chess005">005</a>
+          <a href="/chess006" aria-current="page">006</a>
+          <a href="/chess007">007</a>
+          <a href="/chess008">008</a>
+        </nav>
+        <p class="score" aria-live="polite">
+          <span id="status">Lesson 1 · classics of thought</span>
+        </p>
+      </header>
+
+      <div class="layout">
+
+        <div class="board-wrap fill-canvas">
+          <canvas id="board" width="640" height="640" aria-label="Chess lesson board"></canvas>
+          <p class="overlay" id="overlay" hidden>Find the idea</p>
+        
+
+          <div class="board-actions" aria-label="Board actions">
+            <button type="button" class="board-act board-act-go" data-board-act="next">Next</button>
+            <button type="button" class="board-act" data-board-act="back">Take back</button>
+            <button type="button" class="board-act" data-board-act="hint">Hint</button>
+            <button type="button" class="board-act" data-board-act="ai">AI Move</button>
+          </div>
+        </div>
+
+        <aside class="controls" aria-label="Lesson controls">
+          <div class="settings">
+            <div class="book-tabs" role="tablist" aria-label="Book">
+              <button type="button" class="book-btn is-active" data-book="all" role="tab" aria-selected="true">All</button>
+              <button type="button" class="book-btn" data-book="kotov" role="tab">Kotov</button>
+              <button type="button" class="book-btn" data-book="fischer" role="tab">Fischer</button>
+              <button type="button" class="book-btn" data-book="bronstein" role="tab">Bronstein</button>
+            </div>
+            <label class="setup-picker">
+              <span class="step-label" id="setup-label">All lessons</span>
+              <select id="lesson-select" aria-label="Choose lesson"></select>
+            </label>
+            <div class="step" data-setting="lesson">
+              <span class="step-label">Lesson</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Previous lesson">−</button>
+              <span class="step-val" id="val-lesson">1</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="Next lesson">+</button>
+            </div>
+            <label class="level-slider">
+              <span class="step-label">1–300</span>
+              <input type="range" id="lesson-range" min="1" max="300" value="1" />
+            </label>
+            <p class="level-meta" id="level-meta">Lesson 1/300 · Kotov · 1700+</p>
+          </div>
+
+          <button type="button" id="btn-hint" class="btn-secondary">Hint</button>
+          <button type="button" id="btn-ai" class="btn-secondary">AI Move</button>
+          <button type="button" id="btn-back" class="btn-secondary">Take back</button>
+          <button type="button" id="btn-next" class="btn-start">Next</button>
+
+          <div class="puzzle-name" id="puzzle-name" aria-live="polite">
+            <span class="puzzle-phase" id="puzzle-phase">Kotov · 1700+</span>
+            <strong class="puzzle-title" id="puzzle-title">1. Candidate moves</strong>
+            <span class="puzzle-sub" id="puzzle-sub">Find the teaching idea</span>
+          </div>
+
+          <p class="teach-text" id="teach-text">
+            Calculation method, champion thinking, and Zurich middlegame strategy — 100 lessons each.
+          </p>
+
+          <div class="stats" aria-live="polite">
+            <div><span class="cap-label">Solved</span> <span id="solved">0</span></div>
+            <div><span class="cap-label">Streak</span> <span id="streak">0</span></div>
+            <div><span class="cap-label">Done</span> <span id="progress">0/300</span></div>
+          </div>
+        </aside>
+
+        <aside class="lesson-info" aria-label="Lesson information" id="lesson-info">
+          <div class="coach-note" id="coach-note" hidden>
+            <h3 class="info-heading coach-heading" id="coach-heading">Coach</h3>
+            <p class="coach-grade" id="coach-grade"></p>
+            <p class="coach-stars" id="coach-stars" aria-label="Move rating"></p>
+            <p class="coach-comment" id="coach-comment"></p>
+            <ul class="coach-fixes" id="coach-fixes"></ul>
+          </div>
+
+          <div class="lesson-guide">
+            <p class="info-kicker" id="info-kicker">Lesson guide</p>
+            <h2 class="info-title" id="info-title">About this lesson</h2>
+            <p class="info-about" id="info-about">What you are practicing appears here.</p>
+            <h3 class="info-heading">Description</h3>
+            <p class="info-desc" id="info-desc">Longer description of the idea.</p>
+            <h3 class="info-heading">Pitfalls</h3>
+            <ul class="info-pitfalls" id="info-pitfalls"></ul>
+            <p class="info-goal" id="info-goal"></p>
+          </div>
+        </aside>
+      </div>
+
+      <p class="hint" id="hint">Select a lesson · play the teaching move</p>
+    </div>
+
+    <script src="/chess006/lessons.js?v=48"></script>
+  </body>
+</html>

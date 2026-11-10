@@ -1,0 +1,534 @@
+:root {
+  --bg-top: #241c28;
+  --bg-bottom: #100e14;
+  --ink: #f0e8f2;
+  --muted: #9a8aa0;
+  --board: #1a221c;
+  --accent: #e8a0c0;
+  --ok: #6dcea0;
+  --bad: #e87070;
+  --light: #e8d9b5;
+  --dark: #5a7a58;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 16% 12%, rgba(232, 160, 192, 0.14), transparent 42%),
+    radial-gradient(circle at 84% 78%, rgba(109, 206, 160, 0.1), transparent 46%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.brand {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.9rem, 3.2vw, 1.25rem);
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.nav a[aria-current="page"],
+.nav a:hover {
+  color: var(--accent);
+}
+
+.score {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.score span {
+  color: var(--ink);
+}
+
+/* Puzzles: wider left menu for phase + setup dropdown */
+/* layout overridden below for guide panel */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.85rem;
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  background: rgba(240, 232, 242, 0.05);
+  border: 3px solid rgba(240, 232, 242, 0.28);
+}
+
+.settings {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.phase-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+}
+
+.phase-btn {
+  appearance: none;
+  min-height: 2.4rem;
+  padding: 0.4rem 0.25rem;
+  border: 2px solid rgba(240, 232, 242, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  line-height: 1.15;
+}
+
+.phase-btn:hover {
+  color: var(--ink);
+  background: rgba(232, 160, 192, 0.16);
+}
+
+.phase-btn.is-active {
+  color: #1a1014;
+  background: var(--accent);
+  border-color: #a06080;
+}
+
+.setup-picker {
+  display: grid;
+  gap: 0.3rem;
+  text-align: left;
+}
+
+.setup-picker select {
+  width: 100%;
+  min-height: 2.35rem;
+  padding: 0.35rem 0.45rem;
+  border: 2px solid rgba(240, 232, 242, 0.35);
+  background: rgba(16, 14, 20, 0.65);
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.setup-picker select:focus {
+  outline: 2px solid rgba(232, 160, 192, 0.55);
+  outline-offset: 1px;
+}
+
+.setup-picker option {
+  background: #1a221c;
+  color: var(--ink);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 2.1rem 2.4rem 2.1rem;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.step-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.step-val {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.step-btn {
+  appearance: none;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 2px solid rgba(240, 232, 242, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.step-btn:hover {
+  background: rgba(232, 160, 192, 0.22);
+}
+
+.level-slider {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.level-slider input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.level-meta {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.puzzle-name {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0.7rem 0.65rem;
+  border: 2px solid rgba(232, 160, 192, 0.45);
+  background: rgba(232, 160, 192, 0.1);
+}
+
+.puzzle-phase {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.puzzle-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 1.6vw, 0.68rem);
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.puzzle-sub {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(240, 232, 242, 0.16);
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+}
+
+.stats > div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.cap-label {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 0;
+}
+
+.btn-start,
+.btn-secondary {
+  appearance: none;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.65rem 0.8rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 1.8vw, 0.7rem);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.btn-start {
+  border: 3px solid #a06080;
+  background: var(--accent);
+  color: #1a1014;
+  box-shadow: 0 6px 0 #704058;
+}
+
+.btn-secondary {
+  border: 3px solid rgba(240, 232, 242, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.btn-start:hover,
+.btn-secondary:hover {
+  filter: brightness(1.06);
+}
+
+.btn-secondary:disabled,
+.btn-start:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: none;
+  transform: none;
+}
+
+.btn-start:active,
+.btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #704058;
+}
+
+#board {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  background: var(--board);
+  border: 4px solid rgba(240, 232, 242, 0.3);
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  pointer-events: none;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.6rem, 2.2vw, 0.85rem);
+  line-height: 1.7;
+  color: var(--accent);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  white-space: pre-line;
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+.overlay.ok {
+  color: var(--ok);
+}
+
+.overlay.bad {
+  color: var(--bad);
+}
+
+
+/* Beat viewport.css 2-col: guide | board | controls */
+.stage .layout {
+  grid-template-columns: minmax(13rem, 19rem) minmax(0, 1fr) minmax(12.5rem, 17rem);
+  grid-template-rows: minmax(0, 1fr);
+  align-items: stretch;
+}
+.stage .guide-panel { grid-column: 1; grid-row: 1; }
+.stage .board-wrap { grid-column: 2; grid-row: 1; }
+.stage .controls { grid-column: 3; grid-row: 1; }
+.stage .guide-panel {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.9rem 0.85rem;
+  text-align: left;
+  background: rgba(240, 232, 242, 0.05);
+  border: 3px solid rgba(232, 160, 192, 0.45);
+}
+.guide-panel .info-kicker {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.guide-panel .info-title {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 1.5vw, 0.7rem);
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--ink);
+}
+.guide-panel .info-about {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.guide-panel .info-heading {
+  margin: 0.35rem 0 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.guide-panel .info-basics {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.guide-panel .info-basics li::marker { color: var(--accent); }
+
+
+.guide-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-height: 0;
+  overflow: auto;
+}
+
+.guide-panel .coach-note {
+  overflow-anchor: none;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+
+.guide-panel .lesson-guide {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.coach-note {
+  overflow-anchor: none;
+  margin-top: 0.35rem;
+  padding: 0.7rem 0.65rem;
+  border: 2px solid rgba(232, 112, 112, 0.55);
+  background: rgba(232, 112, 112, 0.1);
+  display: grid;
+  gap: 0.45rem;
+}
+.coach-note[hidden] { display: none; }
+.coach-note.is-good {
+  border-color: rgba(109, 206, 160, 0.65);
+  background: rgba(109, 206, 160, 0.12);
+}
+.coach-note.is-good .coach-heading { color: var(--ok); }
+.coach-note.is-good .coach-fixes li::marker { color: var(--ok); }
+.coach-heading { color: var(--bad); margin: 0; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.coach-grade {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.5rem, 1.3vw, 0.66rem);
+  line-height: 1.4;
+  color: var(--ink);
+}
+.coach-stars {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  color: #d4a84b;
+}
+.coach-comment {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.coach-fixes {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.coach-fixes li::marker { color: var(--accent); }
+
+@media (max-width: 900px) and (min-width: 769px) {
+  .stage .layout {
+    grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr) minmax(11rem, 14rem);
+  }
+}
+@media (max-width: 768px) {
+  .stage .layout{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 66.666vh auto auto;
+    align-content: start;
+    overflow: auto;
+  }
+  .stage .board-wrap {
+    order: 1;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100%;
+    height: 66.666dvh !important;
+    height: 66.666vh !important;
+    min-height: 66.666dvh;
+    min-height: 66.666vh;
+    max-height: 70dvh;
+    max-height: 70vh;
+    aspect-ratio: auto;
+
+  }
+  .stage .controls{
+    order: 2;
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    max-height: 42vh;
+  
+    overflow: auto;
+    min-height: 28vh;}
+  .stage .guide-panel{
+    order: 3;
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    max-height: 42vh;
+  
+    overflow: auto;
+    min-height: 28vh;}
+}

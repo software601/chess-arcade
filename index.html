@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="hub.css?v=3" />
+    <link rel="stylesheet" href="viewport.css?v=40" />
+  </head>
+  <body>
+    <main class="hub">
+      <header class="hub-head">
+        <h1 class="hub-brand">Arcade</h1>
+        <p class="hub-sub">Pick a game · served by <code>node serv.js</code></p>
+      </header>
+      <div class="game-columns" id="game-columns">
+        <section class="game-col" aria-labelledby="chess-col-title">
+          <h2 class="col-title" id="chess-col-title">Chess</h2>
+          <ul class="game-list" id="chess-list"></ul>
+        </section>
+        <section class="game-col" aria-labelledby="other-col-title">
+          <h2 class="col-title" id="other-col-title">Other games</h2>
+          <ul class="game-list" id="other-list"></ul>
+        </section>
+      </div>
+    </main>
+    <script src="hub.js?v=8"></script>
+  </body>
+</html>

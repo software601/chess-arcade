@@ -1,0 +1,219 @@
+:root {
+  --bg-top: #efe6d6;
+  --bg-bottom: #d4c4a8;
+  --panel: #3b2a1a;
+  --ink: #2a1c10;
+  --muted: #6b5340;
+  --board: #f7f0e4;
+  --accent: #c45c26;
+  --ok: #2f6b3a;
+  --bad: #a33b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(196, 92, 38, 0.18), transparent 42%),
+    radial-gradient(circle at 85% 80%, rgba(59, 42, 26, 0.12), transparent 48%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.85rem;
+  padding: 0 0.15rem;
+}
+
+.brand {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(1rem, 3.5vw, 1.35rem);
+  letter-spacing: 0.04em;
+  color: var(--panel);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.nav a[aria-current="page"],
+.nav a:hover {
+  color: var(--accent);
+}
+
+.score {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.score span {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  background: rgba(59, 42, 26, 0.08);
+  border: 3px solid var(--panel);
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.field select {
+  width: 100%;
+  padding: 0.45rem;
+  border: 2px solid var(--panel);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+}
+
+.btn-start {
+  appearance: none;
+  width: 100%;
+  min-height: 3.4rem;
+  padding: 0.75rem 0.8rem;
+  border: 3px solid var(--panel);
+  background: #e2a05a;
+  color: var(--ink);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 6px 0 var(--panel);
+}
+
+.btn-start:hover {
+  filter: brightness(1.05);
+}
+
+.btn-start:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 var(--panel);
+}
+
+.board-wrap {
+  padding: 0.75rem;
+  background: var(--board);
+  border: 4px solid var(--panel);
+  box-shadow: 0 18px 40px rgba(42, 28, 16, 0.18);
+}
+
+.board-wrap.stack-board > #board {
+  display: block;
+  margin: 0 auto;
+  width: min(100%, 420px);
+  max-height: min(42vh, 320px);
+  height: auto !important;
+  position: static !important;
+  inset: auto !important;
+  object-fit: contain !important;
+}
+
+.word {
+  margin: 0.85rem 0 0.5rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.7rem, 2.8vw, 1rem);
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+  color: var(--panel);
+  min-height: 2.2em;
+}
+
+.overlay {
+  margin: 0.35rem 0 0.6rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.55rem, 2vw, 0.72rem);
+  line-height: 1.7;
+  color: var(--accent);
+  white-space: pre-line;
+  min-height: 2.4em;
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.key {
+  appearance: none;
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 2px solid var(--panel);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.key:hover:not(:disabled) {
+  background: #f0d2a8;
+}
+
+.key:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.key.hit {
+  background: #cfe8d3;
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.key.miss {
+  background: #f0d0c8;
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.word,
+.overlay,
+.keys {
+  flex: 0 0 auto;
+}
+
+.hint {
+  font-size: 0.95rem;
+  color: var(--muted);
+}

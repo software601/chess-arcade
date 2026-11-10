@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/pac-man/pacman.css" />
+    <link rel="stylesheet" href="/viewport.css?v=40" />
+  </head>
+  <body>
+    <div class="stage">
+      <header class="hud">
+        <h1 class="brand">Pac-Man</h1>
+        <nav class="nav">
+          <a href="/">Arcade</a>
+          <a href="/snake">Snake</a>
+          <a href="/pac-man" aria-current="page">Pac-Man</a>
+          <a href="/hangman">Hangman</a>
+          <a href="/pong">Pong</a>
+          <a href="/breakout">Breakout</a>
+          <a href="/tetris">Tetris</a>
+          <a href="/flappy">Flappy</a>
+          <a href="/sokoban">Sokoban</a>
+          <a href="/connect4">Connect4</a>
+          <a href="/asteroids">Asteroids</a>
+          <a href="/minesweeper">Mines</a>
+          <a href="/space-invaders">Invaders</a>
+          <a href="/chess">Chess</a>
+          <a href="/chesspuzzles">Puzzles</a>
+          <a href="/chessmulti">Chess Multi</a>
+          <a href="/puzzlemulti">Puzzle Multi</a>
+          <a href="/chess001">001</a>
+          <a href="/chess002">002</a>
+        </nav>
+        <p class="score" aria-live="polite">
+          Score <span id="score">0</span>
+          · Lives <span id="lives">3</span>
+        </p>
+      </header>
+
+      <div class="layout">
+        <aside class="controls" aria-label="Game settings">
+          <div class="settings">
+            <div class="step" data-setting="speed">
+              <span class="step-label">Speed</span>
+              <button type="button" class="step-btn" data-dir="-1" aria-label="Speed slower">−</button>
+              <span class="step-val" id="val-speed">5</span>
+              <button type="button" class="step-btn" data-dir="1" aria-label="Speed faster">+</button>
+            </div>
+          </div>
+          <button type="button" id="btn-sound" class="btn-sound" aria-pressed="false">Sound: On</button>
+          <button type="button" id="btn-start" class="btn-start">Start</button>
+        </aside>
+
+        <div class="board-wrap fill-canvas">
+          <canvas id="board" width="448" height="496" aria-label="Pac-Man board"></canvas>
+          <p class="overlay" id="overlay">Press Start</p>
+        </div>
+      </div>
+
+      <p class="hint" id="hint">Arrows / click board to turn · Eat dots · Avoid ghosts</p>
+    </div>
+
+    <script src="/pac-man/pacman.js"></script>
+  </body>
+</html>

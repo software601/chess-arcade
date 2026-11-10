@@ -1,0 +1,205 @@
+:root {
+  --bg-top: #7ec8e3;
+  --bg-bottom: #4aa3c7;
+  --panel: #2f5d3a;
+  --ink: #1e3324;
+  --muted: #3f5f48;
+  --accent: #f0c419;
+  --bird: #f4d35e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(240, 196, 25, 0.28), transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(47, 93, 58, 0.18), transparent 45%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.brand {
+  margin: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.95rem, 3.2vw, 1.25rem);
+  letter-spacing: 0.04em;
+  color: var(--panel);
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.nav a[aria-current="page"],
+.nav a:hover {
+  color: #14301c;
+}
+
+.score {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.score span {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.28);
+  border: 3px solid var(--panel);
+  overflow: auto;
+}
+
+.settings {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 2.1rem 2.4rem 2.1rem;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.step-val {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.step-btn {
+  appearance: none;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 2px solid var(--panel);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--panel);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.step-btn:hover {
+  background: #ffe08a;
+}
+
+.howto {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  border-top: 1px solid rgba(47, 93, 58, 0.25);
+  padding-top: 0.55rem;
+}
+
+.howto h2 {
+  margin: 0 0 0.4rem;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.58rem;
+  color: var(--panel);
+}
+
+.howto ol {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.howto li {
+  margin: 0.25rem 0;
+}
+
+.howto strong {
+  color: var(--ink);
+}
+
+.btn-start {
+  appearance: none;
+  width: 100%;
+  min-height: 3.2rem;
+  margin-top: auto;
+  padding: 0.7rem 0.75rem;
+  border: 3px solid var(--panel);
+  background: var(--accent);
+  color: var(--ink);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.58rem, 2vw, 0.72rem);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 6px 0 var(--panel);
+}
+
+.btn-start:hover {
+  filter: brightness(1.05);
+}
+
+.btn-start:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 var(--panel);
+}
+
+#board {
+  background: #70c5ce;
+  border: 4px solid var(--panel);
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  pointer-events: none;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.6rem, 2.2vw, 0.8rem);
+  line-height: 1.7;
+  color: #14301c;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.45);
+  white-space: pre-line;
+}
+
+.overlay[hidden] {
+  display: none;
+}
